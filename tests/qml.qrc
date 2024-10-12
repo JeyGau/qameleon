@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>theme/CustomButtonStyle.qml</file>
+        <file>theme/Theme.qml</file>
     </qresource>
 </RCC>

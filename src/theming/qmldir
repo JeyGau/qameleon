@@ -1,3 +1,3 @@
 module qameleon.theming
-singleton AbstractTheme 1.0 AbstractTheme.qml
-PrimaryButtonStyle 1.0 PrimaryButtonStyle.qml
+singleton ThemeManager 1.0 ThemeManager.qml
+AbstractTheme 1.0 AbstractTheme.qml

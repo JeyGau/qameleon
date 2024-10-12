@@ -1,7 +1,8 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import qameleon.controls 2.15 as Qameleon
-import "theme" as Theme
+import qameleon.theming 1.0
+import "theme"
 
 ApplicationWindow {
     visible: true
@@ -13,13 +14,16 @@ ApplicationWindow {
         color: "lightgray"
     }
 
+    Theme {
+        id: theme
+    }
+
 
     Qameleon.Button {
         id: button
         text: "Hello, World!"
         anchors.centerIn: parent
-        style: Theme.CustomButtonStyle {
-        }
+        onClicked: ThemeManager.theme = theme
         height: 120
         width: 240
     }
