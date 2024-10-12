@@ -1,0 +1,8 @@
+{
+    "module": "qameleon.controls",
+    "version": "1.0",
+    "description": "A collection of customizable controls for QML",
+    "files": [
+        "Button.qml"
+    ]
+}

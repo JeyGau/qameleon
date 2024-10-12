@@ -1,0 +1,51 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/cpp
+{
+	"customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cmake-tools",
+                "twxs.cmake",
+                "jeff-hykin.better-cpp-syntax",
+                "ms-python.python",
+                "charliermarsh.ruff",
+                "zxh404.vscode-proto3",
+                "bbenoist.qml",
+                "cschlosser.doxdocgen",
+                "njpwerner.autodocstring",
+                "redhat.vscode-yaml",
+                "ms-azuretools.vscode-docker",
+                "tonka3000.qtvsctools",
+                "joaompinto.vscode-graphviz",
+                "gruntfuggly.todo-tree",
+                "foxundermoon.shell-format",
+                "timonwong.shellcheck",
+                "ms-vscode.cpptools",
+                "streetsidesoftware.code-spell-checker",
+                "akiramiyakoda.cppincludeguard",
+                "psioniq.psi-header",
+                "SonarSource.sonarlint-vscode",
+                "be5invis.toml",
+                "delgan.qml-format",
+                "eamodio.gitlens",
+                "GitHub.copilot",
+                "jock.svg",
+                "naumovs.color-highlight"
+            ]
+        }
+    },
+	"name": "qameleon",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/python:1": {},
+		"ghcr.io/gvatsal60/dev-container-features/sonarlint:1": {}
+	},
+    "runArgs": [
+        "--env", "DISPLAY=${env:DISPLAY}",
+        "--volume", "/tmp/.X11-unix:/tmp/.X11-unix",
+        "--device", "/dev/dri"
+    ]
+}
