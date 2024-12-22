@@ -5,8 +5,7 @@ import qameleon.controls.styles 1.0
 QQC2.Button {
     id: control
 
-    property ButtonStyle style: ButtonStyle {control: control}
-    onStyleChanged: style.control = control
+    property ButtonStyle style: ButtonStyle {}
 
     background: Rectangle {
         color: control.style.background.color

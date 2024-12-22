@@ -9,4 +9,5 @@ QtObject{
     property var verticalAlignment: Qt.AlignVCenter
     property var wrapMode: Text.NoWrap
     property var elide: Text.ElideNone
+    property P.Background background: P.Background {}
 }
