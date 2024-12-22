@@ -10,8 +10,10 @@ ApplicationWindow {
 
     StackLayout {
         id: stackLayout
+        
         anchors.fill: parent
         clip: true
+
         TestTypographies {
             Layout.fillHeight: true
             Layout.fillWidth: true

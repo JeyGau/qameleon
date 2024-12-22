@@ -6,17 +6,14 @@ import qameleon.controls.typographies 1.0 as Label
 ScrollView {
     ColumnLayout {
         Label.Headline1 {
-
             text: "Headline1"
         }
 
         Label.Headline2 {
-
             text: "Headline2"
         }
 
         Label.Headline3 {           
-
             text: "Headline3"
         }
 
@@ -26,7 +23,6 @@ ScrollView {
         }
 
         Label.Headline5 {           
-
             text: "Headline5"
         }
 
@@ -36,34 +32,29 @@ ScrollView {
         }
 
         Label.Subtitle1 {
-
             text: "Subtitle1"
         }
 
         Label.Subtitle2 {
-
             text: "Subtitle2"
         }
 
         Label.Body1 {
-
             text: "Body1"
         }
 
         Label.Body2 {
-
             text: "Body2"
         }
 
         Label.Caption {
-
             text: "Caption"
         }
 
         Label.Overline {
-
             text: "Overline"
         }
 
     }
+    
 }
