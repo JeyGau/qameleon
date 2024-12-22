@@ -10,5 +10,5 @@ install(DIRECTORY src/controls/theming/
         DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/qt/qml/qameleon/controls/theming)
 install(DIRECTORY src/controls/typographies/
         DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/qt/qml/qameleon/controls/typographies)
-install(DIRECTORY src/controls/typographies/styles/
-        DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/qt/qml/qameleon/controls/typographies/styles)
+install(DIRECTORY src/controls/typographies/scales/
+        DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/qt/qml/qameleon/controls/typographies/scales)

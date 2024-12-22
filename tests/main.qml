@@ -9,61 +9,71 @@ import "theme"
 QQC2.ApplicationWindow {
     visible: true
     width: 640
-    height: 480
+    height: 800
     title: qsTr("Hello World")
-
-    background: Rectangle {
-        color: "lightgray"
-    }
-
-    palette.button: "red"
-
-    QQC2.Popup {
-        id: popup
-        width: 400
-        height: 400
-        modal: true
-        visible: false
-        palette.button: "green"
-        QQC2.Button {
-            text: "Close"
-            anchors.centerIn: parent
-            onClicked: popup.close()
-        }
-    }
 
     ColumnLayout {
         anchors.fill: parent
         spacing: 10
 
         Headline1 {
-            Layout.fillWidth: true
+            Layout.fillHeight: true
             text: "Headline1"
         }
 
         Headline2 {
-            Layout.fillWidth: true
+            Layout.fillHeight: true
             text: "Headline2"
         }
 
-        Headline3 {
-            Layout.fillWidth: true
+        Headline3 {           
+            Layout.fillHeight: true
             text: "Headline3"
         }
 
-        Headline4 {
-            Layout.fillWidth: true
+        Headline4 {            
+            Layout.fillHeight: true
             text: "Headline4"
         }
 
-        Headline5 {
-            Layout.fillWidth: true
+        Headline5 {           
+            Layout.fillHeight: true
             text: "Headline5"
         }
 
-        Headline6 {
-            Layout.fillWidth: true
+        Headline6 {            
+            Layout.fillHeight: true
             text: "Headline6"
+        }
+
+        Subtitle1 {
+            Layout.fillHeight: true
+            text: "Subtitle1"
+        }
+
+        Subtitle2 {
+            Layout.fillHeight: true
+            text: "Subtitle2"
+        }
+
+        Body1 {
+            Layout.fillHeight: true
+            text: "Body1"
+        }
+
+        Body2 {
+            Layout.fillHeight: true
+            text: "Body2"
+        }
+
+        Caption {
+            Layout.fillHeight: true
+            text: "Caption"
+        }
+
+        Overline {
+            Layout.fillHeight: true
+            text: "Overline"
         }
 
     }

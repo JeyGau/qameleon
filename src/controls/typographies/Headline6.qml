@@ -1,5 +1,5 @@
 import ".."
-import qameleon.controls.typographies.styles 1.0
+import qameleon.controls.typographies.scales 1.0
 import QtQuick 2.15
 
 Item {
@@ -14,7 +14,7 @@ Item {
         id: label
         
         anchors.fill: parent
-        style: Headline6Style
+        style: H6
     }
 
 }

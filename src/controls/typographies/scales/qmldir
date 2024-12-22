@@ -1,0 +1,13 @@
+module qameleon.controls.typographies.scales
+singleton H1 1.0 H1.qml
+singleton H2 1.0 H2.qml
+singleton H3 1.0 H3.qml
+singleton H4 1.0 H4.qml
+singleton H5 1.0 H5.qml
+singleton H6 1.0 H6.qml
+singleton Subtitle1 1.0 Subtitle1.qml
+singleton Subtitle2 1.0 Subtitle2.qml
+singleton Body1 1.0 Body1.qml
+singleton Body2 1.0 Body2.qml
+singleton Overline 1.0 Overline.qml
+singleton Caption 1.0 Caption.qml

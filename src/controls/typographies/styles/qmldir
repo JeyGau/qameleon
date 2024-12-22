@@ -1,7 +1,0 @@
-module qameleon.controls.typographies.styles
-singleton Headline1Style 1.0 Headline1Style.qml
-singleton Headline2Style 1.0 Headline2Style.qml
-singleton Headline3Style 1.0 Headline3Style.qml
-singleton Headline4Style 1.0 Headline4Style.qml
-singleton Headline5Style 1.0 Headline5Style.qml
-singleton Headline6Style 1.0 Headline6Style.qml
