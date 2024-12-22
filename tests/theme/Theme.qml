@@ -1,4 +1,4 @@
-import qameleon.theming 1.0
+import qameleon.controls.theming 1.0
 import QtQuick.Controls.Material 2.12
 
 AbstractTheme {

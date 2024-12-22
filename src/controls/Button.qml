@@ -1,6 +1,6 @@
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick 2.15
-import qameleon.styles 1.0
+import qameleon.controls.styles 1.0
 
 QQC2.Button {
     id: control
@@ -18,9 +18,5 @@ QQC2.Button {
     contentItem: Label {
         text: control.text
         style: control.style.label
-        leftPadding: control.style.label.padding.left
-        rightPadding: control.style.label.padding.right
-        topPadding: control.style.label.padding.top
-        bottomPadding: control.style.label.padding.bottom
     }
 }
