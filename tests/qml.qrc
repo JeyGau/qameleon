@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>theme/Theme.qml</file>
+        <file>TestTypographies.qml</file>
     </qresource>
 </RCC>

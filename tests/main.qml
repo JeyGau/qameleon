@@ -1,81 +1,44 @@
 import QtQuick 2.15
-import QtQuick.Controls 2.15 as QQC2
+import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
-import qameleon.controls 2.15
-import qameleon.controls.typographies 1.0
-import qameleon.controls.theming 1.0
-import "theme"
 
-QQC2.ApplicationWindow {
+ApplicationWindow {
     visible: true
     width: 640
-    height: 800
+    height: 480
     title: qsTr("Hello World")
 
-    ColumnLayout {
+    StackLayout {
+        id: stackLayout
         anchors.fill: parent
-        spacing: 10
-
-        Headline1 {
+        clip: true
+        TestTypographies {
             Layout.fillHeight: true
-            text: "Headline1"
+            Layout.fillWidth: true
         }
-
-        Headline2 {
-            Layout.fillHeight: true
-            text: "Headline2"
-        }
-
-        Headline3 {           
-            Layout.fillHeight: true
-            text: "Headline3"
-        }
-
-        Headline4 {            
-            Layout.fillHeight: true
-            text: "Headline4"
-        }
-
-        Headline5 {           
-            Layout.fillHeight: true
-            text: "Headline5"
-        }
-
-        Headline6 {            
-            Layout.fillHeight: true
-            text: "Headline6"
-        }
-
-        Subtitle1 {
-            Layout.fillHeight: true
-            text: "Subtitle1"
-        }
-
-        Subtitle2 {
-            Layout.fillHeight: true
-            text: "Subtitle2"
-        }
-
-        Body1 {
-            Layout.fillHeight: true
-            text: "Body1"
-        }
-
-        Body2 {
-            Layout.fillHeight: true
-            text: "Body2"
-        }
-
-        Caption {
-            Layout.fillHeight: true
-            text: "Caption"
-        }
-
-        Overline {
-            Layout.fillHeight: true
-            text: "Overline"
-        }
-
     }
 
+    footer: RowLayout {
+        height: 60
+        width: parent.width
+        Button {
+            Layout.leftMargin: 10
+            Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
+            Layout.preferredHeight: 40
+            enabled: stackLayout.currentIndex > 0
+            text: "Previous"
+            onClicked: stackLayout.currentIndex = stackLayout.currentIndex - 1
+        }
+
+        Button {
+            Layout.rightMargin: 10
+            Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+            Layout.preferredHeight: 40
+            enabled: stackLayout.currentIndex < stackLayout.count - 1
+            text: "Next"
+            onClicked: stackLayout.currentIndex = stackLayout.currentIndex + 1
+        }
+    }
+    
+    
 }
