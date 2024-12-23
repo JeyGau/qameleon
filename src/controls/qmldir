@@ -1,3 +1,4 @@
 module qameleon.controls
-Button 2.15 Button.qml
-Label 2.15 Label.qml
+depends qameleon.controls.styles 1.0
+Button 1.0 Button.qml
+Label 1.0 Label.qml

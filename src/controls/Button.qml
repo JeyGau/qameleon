@@ -1,5 +1,5 @@
-import QtQuick.Controls 2.15 as QQC2
 import QtQuick 2.15
+import QtQuick.Controls 2.15 as QQC2
 import qameleon.controls.styles 1.0
 
 QQC2.Button {
@@ -16,6 +16,6 @@ QQC2.Button {
 
     contentItem: Label {
         text: control.text
-        style: control.style.label
+        typography: control.style.typography
     }
 }

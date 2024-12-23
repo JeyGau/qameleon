@@ -2,14 +2,10 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import qameleon.controls.styles 1.0
 
-QQC2.Label {
+QQC2.Control {
     id: control
 
-    property LabelStyle style: LabelStyle {}
-    property Typography typography: style.typography
-
-    color: control.typography.color
-    font: control.typography.font
+    property ControlStyle style: ControlStyle {}
 
     background: Rectangle {
         color: control.style.background.color
