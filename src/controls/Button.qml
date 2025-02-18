@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import qameleon.controls.styles 1.0
+import "private" as P
 
 QQC2.Button {
     id: control
@@ -23,11 +24,8 @@ QQC2.Button {
         return control.style.normal
     }
 
-    background: Rectangle {
-        color: control.activeStyle.background.color
-        border.color: control.activeStyle.background.border.color
-        border.width: control.activeStyle.background.border.width
-        radius: control.activeStyle.background.radius
+    background: P.Background {
+        style: control.activeStyle.background
     }
 
     contentItem: Label {
