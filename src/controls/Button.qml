@@ -7,17 +7,33 @@ QQC2.Button {
 
     property ButtonStyle style: ButtonStyle {}
 
+    readonly property ButtonStyle.StatedStyle activeStyle: {
+        if (!control.enabled) {
+            return control.style.disabled
+        }
+
+        if (control.pressed) {
+            return control.style.pressed
+        } 
+
+        if (control.hovered) {
+            return control.style.hovered
+        }
+
+        return control.style.normal
+    }
+
     background: Rectangle {
-        color: control.style.background.color
-        border.color: control.style.background.border.color
-        border.width: control.style.background.border.width
-        radius: control.style.background.radius
+        color: control.activeStyle.background.color
+        border.color: control.activeStyle.background.border.color
+        border.width: control.activeStyle.background.border.width
+        radius: control.activeStyle.background.radius
     }
 
     contentItem: Label {
         horizontalAlignment: Qt.AlignHCenter
         verticalAlignment: Qt.AlignVCenter
         text: control.text
-        typography: control.style.typography
+        typography: control.activeStyle.typography
     }
 }
