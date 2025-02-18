@@ -1,7 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
-import qameleon.controls 1.0 as Controls
+import qameleon.controls 1.0 as Qameleon
 import qameleon.controls.styles 1.0
  
 Page {
@@ -12,11 +12,11 @@ Page {
 
         ColumnLayout {
 
-            Controls.Button {
+            Qameleon.Button {
                 text: "Test"
             }
 
-            Controls.Button {
+            Qameleon.Button {
                 style {
                     normal.typography {
                         color: "red"
