@@ -1,3 +1,5 @@
 module qameleon.controls
-Button 2.15 Button.qml
-Label 2.15 Label.qml
+Action 1.0 Action.qml
+ActionsButtonBox 1.0 ActionsButtonBox.qml
+Button 1.0 Button.qml
+Label 1.0 Label.qml

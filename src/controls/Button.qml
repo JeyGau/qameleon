@@ -1,26 +1,57 @@
-import QtQuick.Controls 2.15 as QQC2
+
+import qameleon.controls.styles 1.0
+import QtGraphicalEffects 1.12
 import QtQuick 2.15
-import qameleon.styles 1.0
+import QtQuick.Controls 2.15 as QQC2
 
 QQC2.Button {
-    id: control
+    id: button
 
-    property ButtonStyle style: ButtonStyle {control: control}
-    onStyleChanged: style.control = control
+    property ButtonStyle buttonStyle: ButtonStyle {}
+
+    implicitWidth: textMetrics.width + leftPadding + rightPadding
+    implicitHeight: textMetrics.height + topPadding + bottomPadding
+
+    TextMetrics {
+        id: textMetrics
+
+        text: button.text
+        font: buttonStyle.font
+    }
 
     background: Rectangle {
-        color: control.style.background.color
-        border.color: control.style.background.border.color
-        border.width: control.style.background.border.width
-        radius: control.style.background.radius
+        color: {
+            if (button.down)
+                return buttonStyle.backgroundColorDown;
+
+            if (button.checked)
+                return buttonStyle.backgroundColorChecked;
+
+            return buttonStyle.backgroundColor;
+        }
+        border.color: button.down ? buttonStyle.borderColorDown : buttonStyle.borderColor
+        border.width: buttonStyle.borderWidth
+        radius: buttonStyle.radius
+        layer.enabled: buttonStyle.dropShadowEnabled
+
+        layer.effect: DropShadow {
+            horizontalOffset: 0
+            verticalOffset: 3
+            radius: 10
+            samples: 17
+            color: HMIConstants.shadowsColor
+        }
+
     }
 
-    contentItem: Label {
-        text: control.text
-        style: control.style.label
-        leftPadding: control.style.label.padding.left
-        rightPadding: control.style.label.padding.right
-        topPadding: control.style.label.padding.top
-        bottomPadding: control.style.label.padding.bottom
+    contentItem: Text {
+        clip: true
+        text: button.text
+        color: button.checked || button.down ? buttonStyle.textColorDown : buttonStyle.textColor
+        font: buttonStyle.font
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignVCenter
+        wrapMode: Text.WordWrap
     }
+
 }

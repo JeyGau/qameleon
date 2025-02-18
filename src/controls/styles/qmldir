@@ -1,0 +1,4 @@
+module qameleon.styles.controls
+ActionsButtonBoxStyle 1.0 ActionsButtonBoxStyle.qml
+ButtonStyle 1.0 ButtonStyle.qml
+LabelStyle 1.0 LabelStyle.qml
