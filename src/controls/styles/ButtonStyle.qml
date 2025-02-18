@@ -1,7 +1,24 @@
 import QtQml 2.15
-import "private" as P
 
 ControlStyle {
-    property Typography typography: Typography {color: palette.buttonText}
-    background.color: palette.button
+
+    component StatedStyle: LabelStyle {}
+
+    property StatedStyle normal: StatedStyle {
+        typography.color: "black"
+        background.color: "lightgray"
+    }
+    property StatedStyle disabled: StatedStyle {
+        typography.color: "gray"
+        background.color: "lightgray"
+    }
+    property StatedStyle pressed: StatedStyle {
+        typography.color: "white"
+        background.color: "darkgray"
+    }
+    property StatedStyle hovered: StatedStyle {
+        typography.color: "black"
+        background.color: "lightgray"
+    }
+
 }

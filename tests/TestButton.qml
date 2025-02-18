@@ -6,7 +6,7 @@ import qameleon.controls.styles 1.0
  
 Page {
     title: "Test Button"
-    
+
     ScrollView {
         anchors.fill: parent
 
@@ -18,11 +18,11 @@ Page {
 
             Controls.Button {
                 style {
-                    typography {
+                    normal.typography {
                         color: "red"
                         font.pixelSize: 20
                     }
-                    background {
+                    normal.background {
                         color: "lightgreen"
                         border {
                             color: "green"
