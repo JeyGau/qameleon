@@ -1,7 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
-import qameleon.controls 1.0 as Controls
+import qameleon.controls 1.0 as Qameleon
 
 ApplicationWindow {
     visible: true
@@ -36,27 +36,29 @@ ApplicationWindow {
         }
     }
 
-    footer: RowLayout {
+    footer: Qameleon.ActionsButtonBox {
         height: 60
-        width: parent.width
-        Button {
-            Layout.leftMargin: 10
-            Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
-            Layout.preferredHeight: 40
-            enabled: stackLayout.currentIndex > 0
-            text: "Previous"
-            onClicked: stackLayout.currentIndex = stackLayout.currentIndex - 1
+
+        horizontalPadding: 30
+
+        ActionGroup {
+
+            Qameleon.Action {
+                text: "Previous"
+                enabled: stackLayout.currentIndex > 0
+                onTriggered: stackLayout.currentIndex = stackLayout.currentIndex - 1
+                role: Qameleon.ActionsButtonBox.Role.Secondary
+            }
+
+            Qameleon.Action {
+                text: "Next"
+                enabled: stackLayout.currentIndex < stackLayout.count - 1
+                onTriggered: stackLayout.currentIndex = stackLayout.currentIndex + 1
+                role: Qameleon.ActionsButtonBox.Role.Primary
+            }
+
         }
 
-        Button {
-            Layout.rightMargin: 10
-            Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-            Layout.preferredHeight: 40
-            enabled: stackLayout.currentIndex < stackLayout.count - 1
-            text: "Next"
-            onClicked: stackLayout.currentIndex = stackLayout.currentIndex + 1
-        }
     }
-    
     
 }
