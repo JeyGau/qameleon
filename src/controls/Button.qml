@@ -15,6 +15,8 @@ QQC2.Button {
     }
 
     contentItem: Label {
+        horizontalAlignment: Qt.AlignHCenter
+        verticalAlignment: Qt.AlignVCenter
         text: control.text
         typography: control.style.typography
     }
