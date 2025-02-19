@@ -24,6 +24,7 @@ QQC2.Button {
         return control.style.normal
     }
 
+
     background: P.Background {
         style: control.activeStyle.background
     }

@@ -2,8 +2,9 @@ import qameleon.controls.styles 1.0
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as QQC2
+import "private" as P
 
-Control {
+QQC2.Control {
     id: control
 
     enum Alignment {
@@ -25,6 +26,10 @@ Control {
 
     padding: 0
     spacing: 16
+
+    background: P.Background {
+        style: control.style.background
+    }
 
     contentItem: Item {
         implicitHeight: buttonLayout.height
