@@ -11,6 +11,7 @@ AbstractTheme {
     disabledBackgroundColor: Material.color(Material.Grey)
     textColor: Material.color(Material.Green, Material.Shade900)
     disabledTextColor: Material.color(Material.Grey, Material.Shade600)
+    viewColor: Material.color(Material.Green, Material.Shade100)
 
     disabled: AbstractTheme.ColorSet {
         backgroundColor: theme.disabledBackgroundColor

@@ -5,7 +5,7 @@ import qameleon.controls 1.0 as Qameleon
 import qameleon.controls.styles 1.0
 import QtQuick.Controls.Material 2.15
 
-Page {
+Qameleon.Page {
     title: "Test Label"
 
     ScrollView {
