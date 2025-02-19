@@ -2,12 +2,22 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import qameleon.controls 1.0 as Qameleon
+import qameleon.controls.theming 1.0 as Qameleon
+import "./theme"
 
 ApplicationWindow {
     visible: true
     width: 640
     height: 480
     title: stackLayout.children[stackLayout.currentIndex].title
+
+    Theme {
+        id: mainTheme
+    }
+
+    Component.onCompleted: {
+        Qameleon.ThemeManager.theme = mainTheme;
+    }
 
     StackLayout {
         id: stackLayout

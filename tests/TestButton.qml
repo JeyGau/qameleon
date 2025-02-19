@@ -2,45 +2,63 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import qameleon.controls 1.0 as Qameleon
-import qameleon.controls.styles 1.0
- 
+import QtQuick.Controls.Material 2.15
+
 Page {
     title: "Test Button"
 
     ScrollView {
-        anchors.fill: parent
+        anchors.centerIn: parent
 
         ColumnLayout {
 
             Qameleon.Button {
-                text: "Test"
+                Layout.alignment: Qt.AlignHCenter
+                text: "Default style"
             }
 
             Qameleon.Button {
+                Layout.alignment: Qt.AlignHCenter
                 style {
-                    normal.typography {
-                        color: "red"
-                        font.pixelSize: 20
-                    }
-                    normal.background {
-                        color: "lightgreen"
-                        border {
-                            color: "green"
-                            width: 3
+                    normal {
+                        typography.color: Material.color(Material.Red, Material.Shade900)
+                        background {
+                            color: Material.color(Material.Red)
+                            border {
+
+                                color: Material.color(Material.Red, Material.Shade900)
+                            }
                         }
-                        radius: 5
+                    }
+
+                    hovered {
+                        typography.color: Material.color(Material.Red, Material.Shade900)
+                        background {
+                            color: Material.color(Material.Red)
+                            border {
+
+                                color: Material.color(Material.Red, Material.Shade900)
+                            }
+                        }
+                    }
+
+                    pressed {
+                        typography.color: Material.color(Material.Red, Material.Shade200)
+                        background {
+                            color: Material.color(Material.Red, Material.Shade100)
+                            border {
+                                color: Material.color(Material.Red, Material.Shade200)
+                            }
+                        }
                     }
                 }
-                topPadding: 10
-                leftPadding: 20
-                rightPadding: 30
-                bottomPadding: 40
-                    
-                text: "Test"
+                text: "Custom style"
             }
+
         }
 
     }
 }
+
 
 
