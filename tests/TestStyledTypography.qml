@@ -1,11 +1,12 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import qameleon.controls 1.0 as Qameleon
 import qameleon.controls.typographies.scales 1.0 as Scales
 import qameleon.controls.typographies 1.0 as Label
 import QtQuick.Controls.Material 2.15
 
-Page {
+Qameleon.Page {
     title: "Test Styled Typography"
 
 

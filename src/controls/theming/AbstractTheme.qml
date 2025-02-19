@@ -47,6 +47,7 @@ QtObject {
     property color hintColor: Material.color(Material.Grey)
 
     property color backgroundColor: Material.background
+    property color viewColor: "transparent"
     property color disabledBackgroundColor: Material.color(Material.Grey)
 
     property color highlightColor: Material.accent

@@ -2,8 +2,9 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import qameleon.controls.typographies 1.0 as Label
+import qameleon.controls 1.0 as Qameleon
 
-Page {
+Qameleon.Page {
     title: "Test Typographies"
 
     ScrollView {

@@ -29,10 +29,11 @@ QQC2.Button {
         style: control.activeStyle.background
     }
 
-    contentItem: Label {
+    contentItem: Text {
         horizontalAlignment: Qt.AlignHCenter
         verticalAlignment: Qt.AlignVCenter
         text: control.text
-        typography: control.activeStyle.typography
+        color: control.activeStyle.typography.color
+        font: control.activeStyle.typography.font
     }
 }

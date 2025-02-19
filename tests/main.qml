@@ -5,7 +5,7 @@ import qameleon.controls 1.0 as Qameleon
 import qameleon.controls.theming 1.0 as Qameleon
 import "./theme"
 
-ApplicationWindow {
+Qameleon.ApplicationWindow {
     visible: true
     width: 640
     height: 480

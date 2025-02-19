@@ -4,7 +4,7 @@ import QtQuick.Layouts 1.15
 import qameleon.controls 1.0 as Qameleon
 import QtQuick.Controls.Material 2.15
 
-Page {
+Qameleon.Page {
     title: "Test Button"
 
     ScrollView {
