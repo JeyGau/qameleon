@@ -1,0 +1,44 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+        {
+            "label": "Build and Install src",
+            "type": "shell",
+            "command": "mkdir -p build && cd build && cmake .. && make && sudo make install",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Builds and installs the src/ repository"
+        },
+		{
+			"label": "Build test",
+			"type": "shell",
+			"command": "cd tests && mkdir -p build && cd build && cmake .. && make",
+			"problemMatcher": ["$gcc"],
+			"detail": "Builds the test/ repository"
+		},
+		{
+			"label": "Build all",
+			"type": "shell",
+			"command": "mkdir -p build && cd build && cmake .. && make && sudo make install && cd ../tests && mkdir -p build && cd build && cmake .. && make",
+			"problemMatcher": ["$gcc"],
+			"detail": "Builds the src/ and test/ repositories"
+		},
+		{
+			"label": "Run tests",
+			"type": "shell",
+			"command": "cd tests/build && ./QameleonTest",
+			"problemMatcher": ["$gcc"],
+			"detail": "Runs the tests"
+		},
+		{
+			"label": "Build & run",
+			"type": "shell",
+			"command": "mkdir -p build && cd build && cmake .. && make && sudo make install && cd ../tests && mkdir -p build && cd build && cmake .. && make && ./QameleonTest",
+			"problemMatcher": ["$gcc"],
+			"detail": "Builds the src/ and test/ repositories and runs the tests"
+		}
+	]
+}
