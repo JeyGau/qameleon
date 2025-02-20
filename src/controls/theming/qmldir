@@ -1,3 +1,4 @@
 module qameleon.controls.theming
 singleton ThemeManager 1.0 ThemeManager.qml
 AbstractTheme 1.0 AbstractTheme.qml
+Styles 1.0 Styles.qml
