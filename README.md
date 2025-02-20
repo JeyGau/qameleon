@@ -34,35 +34,59 @@ import qameleon.controls 1.0 as Qameleon
 import QtQuick.Controls.Material 2.15
 
 Page {
-    title: "Test Label"
+    title: "Test Button"
 
     ScrollView {
         anchors.centerIn: parent
 
         ColumnLayout {
 
-            Qameleon.Label {
-                text: "Default style" // uses default style from your theme
+            Qameleon.Button {
+                // uses default style from your theme
+                Layout.alignment: Qt.AlignHCenter
+                text: "Default style"
             }
 
-            Qameleon.Label {
+            Qameleon.Button {
+                Layout.alignment: Qt.AlignHCenter
                 style {
-                    typography {
-                        color: Material.color(Material.Green)
-                        font.pixelSize: 20
-                    }
-                    background {
-                        color: Material.color(Material.Green, Material.Shade200)
-                        border {
-                            color: Material.color(Material.Green)
+                    normal {
+                        typography.color: Material.color(Material.Red, Material.Shade900)
+                        background {
+                            color: Material.color(Material.Red)
+                            border {
+
+                                color: Material.color(Material.Red, Material.Shade900)
+                            }
                         }
-                        radius: 5
+                    }
+
+                    hovered {
+                        typography.color: Material.color(Material.Red, Material.Shade900)
+                        background {
+                            color: Material.color(Material.Red)
+                            border {
+
+                                color: Material.color(Material.Red, Material.Shade900)
+                            }
+                        }
+                    }
+
+                    pressed {
+                        typography.color: Material.color(Material.Red, Material.Shade200)
+                        background {
+                            color: Material.color(Material.Red, Material.Shade100)
+                            border {
+                                color: Material.color(Material.Red, Material.Shade200)
+                            }
+                        }
                     }
                 }
-                
                 text: "Custom style"
             }
+
         }
+
     }
 }
 ```
