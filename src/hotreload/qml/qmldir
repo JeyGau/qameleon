@@ -1,0 +1,3 @@
+module qameleon.hotreload
+ApplicationStackView 1.0 ApplicationStackView.qml
+ViewFactory 1.0 ViewFactory.qml
