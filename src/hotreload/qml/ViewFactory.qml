@@ -10,7 +10,7 @@ Item {
         required property Component component_ 
     }
 
-    function get(view) {
+    function create(view) {
         for (var i = 0; i < children.length; i++) {
             if (children[i].enum_ === view) {
                 return children[i].component_.createObject(factory);

@@ -8,7 +8,7 @@ T.Control {
     property alias currentItem: stack.currentItem
 
     function replace(view, target, properties, operation) {
-        var newView = viewFactory.get(view);
+        var newView = viewFactory.create(view);
         if (newView) {
             stack.replace(target, newView, properties, operation);
             stack.viewsStacked[stack.viewsStacked.length - 1] = view;
@@ -18,7 +18,7 @@ T.Control {
     }
 
     function push(view, properties, operation) {
-        var newView = viewFactory.get(view);
+        var newView = viewFactory.create(view);
         if (newView) {
             stack.push(newView, properties, operation);
             stack.viewsStacked.push(view);
