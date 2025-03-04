@@ -1,5 +1,5 @@
 import QtQuick 2.15
-import QtQuick.Controls 2.15 as QQC2
+import QtQuick.Templates 2.15 as QQC2
 import qameleon.controls.styles 1.0
 import "private" as P
 
@@ -23,7 +23,6 @@ QQC2.Button {
 
         return control.style.normal
     }
-
 
     background: P.Background {
         style: control.activeStyle.background
