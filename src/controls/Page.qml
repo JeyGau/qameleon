@@ -2,10 +2,10 @@ import QtQuick.Controls 2.15 as QQC2
 import qameleon.controls.styles 1.0
 import "private" as P
 
-QQC2.Control {
+QQC2.Page {
     id: control
 
-    property ControlStyle style: ControlStyle {}
+    property PageStyle style: PageStyle {}
 
     background: P.Background {
         style: control.style.background
