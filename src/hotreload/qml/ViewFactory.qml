@@ -1,13 +1,15 @@
 import QtQuick 2.15
 
-Item {
-    id: factory
+// TODO: move this API to C++
 
-    required property int mainView
+Item {
+    id: root
+
+    property int mainView: children[0].key
 
     function get(view) : Component {
         for (var i = 0; i < children.length; i++) {
-            if (children[i].name === view)
+            if (children[i].key === view)
                 return children[i].component_;
 
         }
@@ -15,7 +17,8 @@ Item {
     }
 
     component View: Item {
-        required property int name
+        required property int key
+        property string name: ""
         default property Component component_
     }
 

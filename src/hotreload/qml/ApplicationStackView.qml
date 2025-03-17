@@ -1,6 +1,9 @@
 import QtQuick 2.15
 import QtQuick.Templates 2.15 as T
 
+// TODO: move this API to C++
+// TODO: add an attached property to the viewFactory so that we can access ApplicationStackView from the ViewFactory
+
 T.Control {
     id: control
 
@@ -37,7 +40,6 @@ T.Control {
         stack.viewsStacked = [];
         stack.clear();
         for (var i = 0; i < views.length; i++) {
-            console.log("Loading view: " + views[i]);
             push(views[i]);
         }
     }

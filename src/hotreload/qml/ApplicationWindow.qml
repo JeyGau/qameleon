@@ -7,7 +7,8 @@ QQC2.ApplicationWindow {
 
     ApplicationStackView {
         id: applicationStackView
-        
+
         anchors.fill: parent
     }
+
 }
