@@ -37,8 +37,12 @@ bool HotReloader::reload()
         return false;
     }
 
+    if (!stackView->property(m_viewFactoryProperty.toUtf8()).isValid()) {
+        qCritical() << "Could not find view factory property" << m_viewFactoryProperty;
+    }
+
     newViewFactory->setParent(stackView);
-    stackView->setProperty(m_viewFactoryName.toUtf8(),
+    stackView->setProperty(m_viewFactoryProperty.toUtf8(),
                            QVariant::fromValue(newViewFactory));
 
     return true;

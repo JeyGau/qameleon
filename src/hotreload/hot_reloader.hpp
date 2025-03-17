@@ -15,7 +15,7 @@ public:
 private:
     QQmlApplicationEngine* m_engine;
     QString m_reloadFilePath;  // path of the view factory file to reload
-    QString m_viewFactoryName = "viewFactory";
+    QString m_viewFactoryProperty = "viewFactory";
     QString m_stackViewName = "applicationStackView";
 };
 }  // namespace qameleon::hot_reload

@@ -4,7 +4,7 @@ import QtQuick.Templates 2.15 as T
 T.Control {
     id: control
 
-    required property ViewFactory viewFactory
+    required property var viewFactory
     property alias currentItem: stack.currentItem
     property alias replaceEnter: stack.replaceEnter
     property alias replaceExit: stack.replaceExit
@@ -19,7 +19,7 @@ T.Control {
             stack.replace(target, newView, properties, operation);
             stack.viewsStacked[stack.viewsStacked.length - 1] = view;
         } else {
-            console.error("Failed to display view: " + view);
+            console.error("Failed to replace view: " + view);
         }
     }
 
@@ -29,7 +29,7 @@ T.Control {
             stack.push(newView, properties, operation);
             stack.viewsStacked.push(view);
         } else {
-            console.error("Failed to display view: " + view);
+            console.error("Failed to push view: " + view);
         }
     }
 
@@ -37,6 +37,7 @@ T.Control {
         stack.viewsStacked = [];
         stack.clear();
         for (var i = 0; i < views.length; i++) {
+            console.log("Loading view: " + views[i]);
             push(views[i]);
         }
     }
