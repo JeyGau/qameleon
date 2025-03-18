@@ -1,8 +1,8 @@
-import QtQuick 2.15
-import QtQuick.Templates 2.15 as T
-
 // TODO: move this API to C++
 // TODO: add an attached property to the viewFactory so that we can access ApplicationStackView from the ViewFactory
+
+import QtQuick 2.15
+import QtQuick.Templates 2.15 as T
 
 T.Control {
     id: control
@@ -36,9 +36,9 @@ T.Control {
         }
     }
 
-    function load(views) {
-        stack.viewsStacked = [];
-        stack.clear();
+    function reload() {
+        const views = stack.viewsStacked;
+        clear();
         for (var i = 0; i < views.length; i++) {
             push(views[i]);
         }
@@ -66,8 +66,13 @@ T.Control {
         return stack.get(stack.get(view), behavior);
     }
 
+    function clear() {
+        stack.clear();
+        stack.viewsStacked = [];
+    }
+
     onViewFactoryChanged: {
-        load(stack.viewsStacked);
+        reload();
     }
     objectName: "applicationStackView"
 
