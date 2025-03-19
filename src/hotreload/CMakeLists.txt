@@ -22,12 +22,12 @@ target_link_libraries(qameleon_hot_reload
 
 # Install the library
 install(TARGETS qameleon_hot_reload
-        LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/qt/qml/qameleon/hotreload
-        ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/qt/qml/qameleon/hotreload
+        LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/qt/qml/org/qameleon/hotreload
+        ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/qt/qml/org/qameleon/hotreload
         )
 
 # Install the header files
 install(FILES ${HEADERS} DESTINATION include/qameleon)
 
 # Install the QML module
-install(DIRECTORY qml/ DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/qt/qml/qameleon/hotreload)
+install(DIRECTORY qml/ DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/qt/qml/org/qameleon/hotreload)

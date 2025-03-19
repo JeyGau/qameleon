@@ -1,7 +1,7 @@
-import qameleon.controls.styles 1.0
 import QtQuick 2.15
-import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as QQC2
+import QtQuick.Layouts 1.15
+import org.qameleon.controls.styles 1.0
 import "private" as P
 
 QQC2.Control {
@@ -21,7 +21,11 @@ QQC2.Control {
 
     default property QQC2.ActionGroup actionGroup
     property int alignment: ActionsButtonBox.Alignment.AlignJustify
-    property ActionsButtonBoxStyle style: ActionsButtonBoxStyle {}
+    property ActionsButtonBoxStyle style
+
+    style: ActionsButtonBoxStyle {
+    }
+
     readonly property var actions: actionGroup.actions
 
     padding: 0

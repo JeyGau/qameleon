@@ -1,4 +1,4 @@
-module qameleon.controls.typographies
+module org.qameleon.controls.typographies
 Headline1 1.0 Headline1.qml
 Headline2 1.0 Headline2.qml
 Headline3 1.0 Headline3.qml

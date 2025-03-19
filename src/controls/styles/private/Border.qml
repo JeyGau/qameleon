@@ -1,7 +1,7 @@
 import QtQml 2.15
-import qameleon.controls.theming 1.0
+import org.qameleon.controls.theming 1.0
 
-QtObject{
+QtObject {
     property color color: ThemeManager.theme.backgroundColor
     property int width: ThemeManager.theme.borderWidth
 }

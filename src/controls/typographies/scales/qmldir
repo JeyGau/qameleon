@@ -1,4 +1,4 @@
-module qameleon.controls.typographies.scales
+module org.qameleon.controls.typographies.scales
 singleton H1 1.0 H1.qml
 singleton H2 1.0 H2.qml
 singleton H3 1.0 H3.qml
