@@ -2,6 +2,8 @@ module org.qameleon.controls
 depends org.qameleon.controls.styles 1.0
 Action 1.0 Action.qml
 ActionsButtonBox 1.0 ActionsButtonBox.qml
+ApplicationWindow 1.0 ApplicationWindow.qml
 Button 1.0 Button.qml
 Control 1.0 Control.qml
 Label 1.0 Label.qml
+Page 1.0 Page.qml

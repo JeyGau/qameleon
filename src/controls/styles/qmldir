@@ -3,4 +3,5 @@ ActionsButtonBoxStyle 1.0 ActionsButtonBoxStyle.qml
 ButtonStyle 1.0 ButtonStyle.qml
 ControlStyle 1.0 ControlStyle.qml
 LabelStyle 1.0 LabelStyle.qml
+PageStyle 1.0 PageStyle.qml
 Typography 1.0 Typography.qml

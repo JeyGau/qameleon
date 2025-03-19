@@ -1,6 +1,6 @@
-import QtQuick.Controls 2.15 as QQC2
+import qameleon.controls 1.0 as Qameleon
 
-QQC2.ApplicationWindow {
+Qameleon.ApplicationWindow {
     id: window
 
     property alias viewFactory: applicationStackView.viewFactory
