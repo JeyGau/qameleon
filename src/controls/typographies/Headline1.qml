@@ -5,5 +5,7 @@ import org.qameleon.controls.typographies.scales 1.0 as Scales
 Label {
     id: label
 
-    typography: Scales.H1
+    typography: Scales.H1 {
+    }
+
 }

@@ -7,14 +7,13 @@ QQC2.Label {
     id: control
 
     property LabelStyle style
-
-    style: LabelStyle {
-    }
-
     property Typography typography: style.typography
 
     color: control.typography.color
     font: control.typography.font
+
+    style: LabelStyle {
+    }
 
     background: P.Background {
         style: control.style.background
