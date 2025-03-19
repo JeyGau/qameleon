@@ -1,4 +1,4 @@
-import qameleon.controls 1.0 as Qameleon
+import org.qameleon.controls 1.0 as Qameleon
 
 Qameleon.ApplicationWindow {
     id: window
