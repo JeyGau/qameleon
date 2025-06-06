@@ -64,5 +64,4 @@ QtObject {
         property color textColor: theme.textColor
         property color borderColor: theme.backgroundColor
     }
-
 }
