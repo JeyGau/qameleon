@@ -1,33 +1,37 @@
-# Add the source files
 set(SOURCES
     hot_reloader.cpp
     qml_files_watcher.cpp
 )
 
-# Add the header files
 set(HEADERS
     hot_reloader.hpp
     qml_files_watcher.hpp
 )
+add_subdirectory(qml)
 
-# Find the required Qt5 packages
-find_package(Qt5 REQUIRED COMPONENTS Quick QuickControls2 Qml Gui)
+# Find the required Qt6 packages
+find_package(Qt6 REQUIRED COMPONENTS Quick QuickControls2 Qml Gui)
+
 # Add the library
-add_library(qameleon_hot_reload ${SOURCES} ${HEADERS})
+add_library(qameleon_hotreload ${SOURCES} ${HEADERS})
+add_library(qameleon::hotreload ALIAS qameleon_hotreload)
 
-# Link to Qt's Quick and Controls libraries
-target_link_libraries(qameleon_hot_reload
-    PRIVATE Qt5::Quick Qt5::QuickControls2 Qt5::Qml
+set_target_properties(qameleon_hotreload PROPERTIES
+    VERSION ${PROJECT_VERSION}
+    SOVERSION 1
+    EXPORT_NAME hotreload
 )
 
-# Install the library
-install(TARGETS qameleon_hot_reload
-        LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/qt/qml/org/qameleon/hotreload
-        ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/qt/qml/org/qameleon/hotreload
-        )
+# Link to Qt's Quick and Controls libraries
+target_link_libraries(qameleon_hotreload
+    PRIVATE Qt6::Quick Qt6::QuickControls2 Qt6::Qml
+)
 
 # Install the header files
 install(FILES ${HEADERS} DESTINATION include/qameleon)
-
-# Install the QML module
-install(DIRECTORY qml/ DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/qt/qml/org/qameleon/hotreload)
+install(TARGETS qameleon_hotreload 
+    EXPORT qameleonTargets
+    LIBRARY DESTINATION lib
+    ARCHIVE DESTINATION lib
+    RUNTIME DESTINATION bin
+)

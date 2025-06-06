@@ -6,7 +6,7 @@ ARG REINSTALL_CMAKE_VERSION_FROM_SOURCE="3.22.2"
 COPY ./reinstall-cmake.sh /tmp/
 
 RUN if [ "${REINSTALL_CMAKE_VERSION_FROM_SOURCE}" != "none" ]; then \
-        chmod +x /tmp/reinstall-cmake.sh && /tmp/reinstall-cmake.sh ${REINSTALL_CMAKE_VERSION_FROM_SOURCE}; \
+    chmod +x /tmp/reinstall-cmake.sh && /tmp/reinstall-cmake.sh ${REINSTALL_CMAKE_VERSION_FROM_SOURCE}; \
     fi \
     && rm -f /tmp/reinstall-cmake.sh
 
@@ -19,23 +19,20 @@ RUN apt-get update \
     g++ \
     libgl1-mesa-dev \
     libopencv-dev \
-    libqt5quickcontrols2-5 \
     libxcb-xinerama0 \
     python3 \
     python3-dev \
     python3-pip \
     python3-tk \
     python3-venv \
-    qtbase5-dev \
-    qtdeclarative5-dev \
-    qtquickcontrols2-5-dev \
-    qml-module-qtquick-controls \
-    qml-module-qtquick-controls2 \
-    qml-module-qtquick-dialogs \
-    qml-module-qtquick-layouts \
-    qml-module-qtquick-window2 \
-    qttools5-dev \
-    qttools5-dev-tools \
+    qml6-module-qtquick-controls \
+    qml6-module-qtquick-dialogs \
+    qml6-module-qtquick-layouts \
+    qml6-module-qtquick-window \
+    qt6-base-dev \
+    qt6-declarative-dev \
+    qt6-tools-dev \
+    qt6-tools-dev-tools \
     unzip \
     wget \
     x11-apps \
