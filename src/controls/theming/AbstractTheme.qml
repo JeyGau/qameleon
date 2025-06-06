@@ -1,5 +1,5 @@
-import QtQml 2.15
-import QtQuick.Controls.Material 2.15
+import QtQml
+import QtQuick.Controls.Material
 
 QtObject {
     id: theme
@@ -35,29 +35,21 @@ QtObject {
     property color linkActiveColor: Material.color(Material.Blue)
     property color linkDisabledColor: Material.color(Material.Grey)
 
-    normal: ColorSet {
-    }
+    normal: ColorSet {}
 
-    disabled: ColorSet {
-    }
+    disabled: ColorSet {}
 
-    pressed: ColorSet {
-    }
+    pressed: ColorSet {}
 
-    hovered: ColorSet {
-    }
+    hovered: ColorSet {}
 
-    focused: ColorSet {
-    }
+    focused: ColorSet {}
 
-    checked: ColorSet {
-    }
+    checked: ColorSet {}
 
-    highlighted: ColorSet {
-    }
+    highlighted: ColorSet {}
 
-    error: ColorSet {
-    }
+    error: ColorSet {}
 
     component ColorSet: QtObject {
         property color backgroundColor: theme.backgroundColor

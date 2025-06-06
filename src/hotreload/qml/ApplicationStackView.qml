@@ -1,8 +1,8 @@
 // TODO: move this API to C++
 // TODO: add an attached property to the viewFactory so that we can access ApplicationStackView from the ViewFactory
 
-import QtQuick 2.15
-import QtQuick.Templates 2.15 as T
+import QtQuick
+import QtQuick.Templates as T
 
 T.Control {
     id: control
@@ -48,13 +48,13 @@ T.Control {
         if (!view) {
             stack.pop();
             stack.viewsStacked.pop(operation);
-            return ;
+            return;
         }
-        if (!stack.viewsStacked.find(function(v) {
+        if (!stack.viewsStacked.find(function (v) {
             return v === view;
         })) {
             console.error("View not found in stack: " + view);
-            return ;
+            return;
         }
         while (stack.viewsStacked[stack.viewsStacked.length - 1] !== view) {
             stack.pop();
@@ -62,7 +62,7 @@ T.Control {
         }
     }
 
-    function get(view, behavior) : int {
+    function get(view, behavior): int {
         return stack.get(stack.get(view), behavior);
     }
 
@@ -81,12 +81,10 @@ T.Control {
 
         property var viewsStacked: [viewFactory.mainView]
 
-        function get(view) : int {
-            return viewsStacked.find(function(v) {
+        function get(view): int {
+            return viewsStacked.find(function (v) {
                 return v === view;
             });
         }
-
     }
-
 }

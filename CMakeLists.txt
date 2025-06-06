@@ -13,6 +13,7 @@ find_package(Qt6 REQUIRED COMPONENTS Core Quick Qml)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
+set(QT_QML_GENERATE_QMLLS_INI ON)
 
 # Define available components
 set(QAMELEON_COMPONENTS controls hotreload)

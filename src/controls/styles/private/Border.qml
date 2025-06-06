@@ -1,5 +1,5 @@
-import QtQml 2.15
-import org.qameleon.controls.theming 1.0
+import QtQml
+import org.qameleon.controls.theming
 
 QtObject {
     property color color: ThemeManager.theme.backgroundColor

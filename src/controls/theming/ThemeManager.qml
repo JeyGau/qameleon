@@ -1,7 +1,7 @@
 pragma Singleton
 
-import QtQml 2.15
+import QtQml
 
 QtObject {
-    property AbstractTheme theme: AbstractTheme {} 
+    property AbstractTheme theme: AbstractTheme {}
 }

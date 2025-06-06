@@ -1,15 +1,12 @@
-import QtQuick 2.15
-import QtQuick.Controls 2.15 as QQC2
-import org.qameleon.controls.styles 1.0
+import QtQuick
+import QtQuick.Controls as QQC2
+import org.qameleon.controls.styles
 import "private" as P
 
 QQC2.Button {
     id: control
 
-    property ButtonStyle style
-
-    style: ButtonStyle {
-    }
+    property ButtonStyle style: ButtonStyle {}
 
     readonly property ButtonStyle.StatedStyle activeStyle: {
         if (!control.enabled)
@@ -35,5 +32,4 @@ QQC2.Button {
         color: control.activeStyle.typography.color
         font: control.activeStyle.typography.font
     }
-
 }

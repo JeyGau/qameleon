@@ -1,5 +1,5 @@
-import QtQml 2.15
-import org.qameleon.controls.theming 1.0
+import QtQml
+import org.qameleon.controls.theming
 
 ControlStyle {
     property StatedStyle normal
@@ -13,9 +13,7 @@ ControlStyle {
             border {
                 color: ThemeManager.theme.normal.borderColor
             }
-
         }
-
     }
 
     property StatedStyle disabled
@@ -29,9 +27,7 @@ ControlStyle {
             border {
                 color: ThemeManager.theme.disabled.borderColor
             }
-
         }
-
     }
 
     property StatedStyle pressed
@@ -45,9 +41,7 @@ ControlStyle {
             border {
                 color: ThemeManager.theme.pressed.borderColor
             }
-
         }
-
     }
 
     property StatedStyle hovered
@@ -61,12 +55,8 @@ ControlStyle {
             border {
                 color: ThemeManager.theme.hovered.borderColor
             }
-
         }
-
     }
 
-    component StatedStyle: LabelStyle {
-    }
-
+    component StatedStyle: LabelStyle {}
 }

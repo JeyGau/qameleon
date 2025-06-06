@@ -1,4 +1,4 @@
-import QtQuick 2.15
+import QtQuick
 
 // TODO: move this API to C++
 
@@ -7,11 +7,10 @@ Item {
 
     property int mainView: children[0].key
 
-    function get(view) : Component {
+    function get(view): Component {
         for (var i = 0; i < children.length; i++) {
             if (children[i].key === view)
                 return children[i].component_;
-
         }
         return null;
     }
@@ -21,5 +20,4 @@ Item {
         property string name: ""
         default property Component component_
     }
-
 }

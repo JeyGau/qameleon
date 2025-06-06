@@ -1,10 +1,9 @@
-import QtQuick 2.15
-import org.qameleon.controls 1.0
-import org.qameleon.controls.typographies.scales 1.0 as Scales
+import QtQuick
+import org.qameleon.controls
+import org.qameleon.controls.typographies.scales as Scales
 
 Label {
     id: label
 
-    typography: Scales.Body1 {
-    }
+    typography: Scales.Body1 {}
 }

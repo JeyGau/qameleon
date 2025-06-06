@@ -1,21 +1,14 @@
-import QtQml 2.15
-import org.qameleon.controls.theming 1.0
+import QtQml
+import org.qameleon.controls.theming
 
 ControlStyle {
-    property ButtonStyle primaryButtonStyle
+    property ButtonStyle primaryButtonStyle: ButtonStyle {}
 
-    primaryButtonStyle: ButtonStyle {
-    }
-
-    property ButtonStyle secondaryButtonStyle
-
-    secondaryButtonStyle: ButtonStyle {
-    }
+    property ButtonStyle secondaryButtonStyle: ButtonStyle {}
 
     property int preferredButtonWidth: 120
     background {
         color: ThemeManager.theme.viewColor
         border.width: 0
     }
-
 }

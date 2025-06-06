@@ -1,6 +1,6 @@
-import QtQuick 2.15
-import org.qameleon.controls.styles 1.0
-import org.qameleon.controls.theming 1.0
+import QtQuick
+import org.qameleon.controls.styles
+import org.qameleon.controls.theming
 
 Typography {
     id: headline6

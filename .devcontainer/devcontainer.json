@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
-	"customizations": {
+    "customizations": {
         "vscode": {
             "extensions": [
                 "ms-vscode.cmake-tools",
@@ -26,26 +26,29 @@
                 "psioniq.psi-header",
                 "SonarSource.sonarlint-vscode",
                 "be5invis.toml",
-                "delgan.qml-format",
                 "eamodio.gitlens",
                 "GitHub.copilot",
                 "jock.svg",
-                "naumovs.color-highlight"
+                "naumovs.color-highlight",
+                "TheQtCompany.qt"
             ]
         }
     },
-	"name": "qameleon",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-	"features": {
-		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/python:1": {},
-		"ghcr.io/gvatsal60/dev-container-features/sonarlint:1": {}
-	},
+    "name": "qameleon",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers/features/python:1": {},
+        "ghcr.io/gvatsal60/dev-container-features/sonarlint:1": {}
+    },
     "runArgs": [
-        "--env", "DISPLAY=${env:DISPLAY}",
-        "--volume", "/tmp/.X11-unix:/tmp/.X11-unix",
-        "--device", "/dev/dri"
+        "--env",
+        "DISPLAY=${env:DISPLAY}",
+        "--volume",
+        "/tmp/.X11-unix:/tmp/.X11-unix",
+        "--device",
+        "/dev/dri"
     ]
 }

@@ -1,5 +1,5 @@
-import QtQuick 2.15
-import org.qameleon.controls.theming 1.0
+import QtQuick
+import org.qameleon.controls.theming
 
 QtObject {
     property color color: ThemeManager.theme.textColor

@@ -1,7 +1,7 @@
-import QtQuick 2.15
-import QtQuick.Controls 2.15 as QQC2
-import QtQuick.Layouts 1.15
-import org.qameleon.controls.styles 1.0
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import org.qameleon.controls.styles
 import "private" as P
 
 QQC2.Control {
@@ -21,10 +21,7 @@ QQC2.Control {
 
     default property QQC2.ActionGroup actionGroup
     property int alignment: ActionsButtonBox.Alignment.AlignJustify
-    property ActionsButtonBoxStyle style
-
-    style: ActionsButtonBoxStyle {
-    }
+    property ActionsButtonBoxStyle style: ActionsButtonBoxStyle {}
 
     readonly property var actions: actionGroup.actions
 
@@ -81,7 +78,6 @@ QQC2.Control {
                         for (var i = 0; i < control.actions.length; i++) {
                             if (control.actions[i].role === ActionsButtonBox.Role.Secondary)
                                 actions.push(control.actions[i]);
-
                         }
                         return actions;
                     }
@@ -97,9 +93,7 @@ QQC2.Control {
                         enabled: secondaryRepeater.model[index].enabled
                         onClicked: secondaryRepeater.model[index].triggered()
                     }
-
                 }
-
             }
 
             RowLayout {
@@ -132,7 +126,6 @@ QQC2.Control {
                         for (var i = 0; i < control.actions.length; i++) {
                             if (control.actions[i].role === ActionsButtonBox.Role.Primary)
                                 actions.push(control.actions[i]);
-
                         }
                         return actions;
                     }
@@ -149,13 +142,8 @@ QQC2.Control {
                         enabled: primaryRepeater.model[index].enabled
                         onClicked: primaryRepeater.model[index].triggered()
                     }
-
                 }
-
             }
-
         }
-
     }
-
 }

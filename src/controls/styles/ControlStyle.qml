@@ -1,4 +1,4 @@
-import QtQml 2.15
+import QtQml
 import "private" as P
 
 QtObject {
