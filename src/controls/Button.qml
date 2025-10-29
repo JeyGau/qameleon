@@ -1,35 +1,29 @@
 import QtQuick
-import QtQuick.Controls as QQC2
+import QtQuick.Templates as T
 import org.qameleon.controls.styles
-import "private" as P
+import org.qameleon.controls
 
-QQC2.Button {
+T.Button {
     id: control
 
     property ButtonStyle style: ButtonStyle {}
 
-    readonly property ButtonStyle.StatedStyle activeStyle: {
-        if (!control.enabled)
-            return control.style.disabled;
-
-        if (control.down)
-            return control.style.pressed;
-
-        if (control.hovered)
-            return control.style.hovered;
-
-        return control.style.normal;
+    Binding {
+        when: control.style
+        target: control.style
+        property: "__control"
+        value: control
     }
 
-    background: P.Background {
-        style: control.activeStyle.background
+    implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset, implicitContentHeight + topPadding + bottomPadding)
+    implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset, implicitContentWidth + leftPadding + rightPadding)
+
+    background: Background {
+        style: control.style.background
     }
 
-    contentItem: Text {
-        horizontalAlignment: Qt.AlignHCenter
-        verticalAlignment: Qt.AlignVCenter
+    contentItem: Label {
+        style: control.style.labelStyle
         text: control.text
-        color: control.activeStyle.typography.color
-        font: control.activeStyle.typography.font
     }
 }

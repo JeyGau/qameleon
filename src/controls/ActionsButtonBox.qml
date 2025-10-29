@@ -1,10 +1,9 @@
-import QtQuick
-import QtQuick.Controls as QQC2
-import QtQuick.Layouts
 import org.qameleon.controls.styles
-import "private" as P
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Templates as T
 
-QQC2.Control {
+T.Control {
     id: control
 
     enum Alignment {
@@ -19,27 +18,28 @@ QQC2.Control {
         Secondary // Secondary action button (see https://m2.material.io/design/color/the-color-system.html#color-theme-creation)
     }
 
-    default property QQC2.ActionGroup actionGroup
+    readonly property T.ActionGroup actionGroup: actionGroup
     property int alignment: ActionsButtonBox.Alignment.AlignJustify
-    property ActionsButtonBoxStyle style: ActionsButtonBoxStyle {}
-
-    readonly property var actions: actionGroup.actions
+    required property ActionsButtonBoxStyle style
+    default property alias actions: actionGroup.actions
 
     padding: 0
     spacing: 16
+    implicitWidth: implicitContentWidth + leftPadding + rightPadding
+    implicitHeight: implicitContentHeight + topPadding + bottomPadding
 
-    background: P.Background {
-        style: control.style.background
+    T.ActionGroup {
+        id: actionGroup
     }
 
     contentItem: Item {
-        implicitHeight: buttonLayout.height
+        implicitHeight: buttonLayout.implicitHeight
+        implicitWidth: buttonLayout.implicitWidth
 
         RowLayout {
             id: buttonLayout
 
             spacing: control.spacing
-            width: Math.min(implicitWidth, parent.width)
 
             anchors {
                 verticalCenter: parent.verticalCenter
@@ -53,7 +53,6 @@ QQC2.Control {
 
                 spacing: control.spacing
                 Layout.fillHeight: true
-                Layout.preferredWidth: implicitWidth
                 Layout.alignment: {
                     var alignment = Qt.AlignVCenter;
                     switch (control.alignment) {
@@ -86,7 +85,9 @@ QQC2.Control {
                         required property int index
 
                         Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
-                        Layout.preferredWidth: control.style.preferredButtonWidth
+                        Layout.maximumWidth: implicitWidth
+                        Layout.fillWidth: true
+                        Layout.minimumWidth: control.style.secondaryButtonStyle.background.implicitWidth
                         visible: secondaryRepeater.model[index].visible
                         style: control.style.secondaryButtonStyle
                         text: secondaryRepeater.model[index].text
@@ -101,7 +102,6 @@ QQC2.Control {
 
                 spacing: control.spacing
                 Layout.fillHeight: true
-                Layout.preferredWidth: implicitWidth
                 Layout.alignment: {
                     var alignment = Qt.AlignVCenter;
                     switch (control.alignment) {
@@ -134,8 +134,9 @@ QQC2.Control {
                         required property int index
 
                         Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
-                        Layout.minimumWidth: implicitWidth
-                        Layout.preferredWidth: control.style.preferredButtonWidth
+                        Layout.maximumWidth: implicitWidth
+                        Layout.fillWidth: true
+                        Layout.minimumWidth: control.style.primaryButtonStyle.background.implicitWidth
                         visible: primaryRepeater.model[index].visible
                         style: control.style.primaryButtonStyle
                         text: primaryRepeater.model[index].text

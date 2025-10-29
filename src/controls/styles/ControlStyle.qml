@@ -1,6 +1,8 @@
 import QtQml
-import "private" as P
+import org.qameleon.controls.styles as S
+import QtQuick.Templates as T
 
 QtObject {
-    property P.Background background: P.Background {}
+    property T.Control __control: null
+    property S.Background background: S.Background {}
 }

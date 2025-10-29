@@ -5,6 +5,7 @@ project(qameleon VERSION 1.0.0 LANGUAGES CXX)
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(QT_QML_GENERATE_QMLLS_INI ON)
 
 # Find Qt6 components
 find_package(Qt6 REQUIRED COMPONENTS Core Quick Qml)

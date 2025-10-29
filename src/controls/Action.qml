@@ -1,6 +1,6 @@
-import QtQuick.Controls as QQC2
+import QtQuick.Templates as T
 
-QQC2.Action {
+T.Action {
     required property int role // ActionsButtonBox.Role if used within an ActionsButtonBox
     property bool visible: true
 

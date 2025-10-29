@@ -1,6 +1,3 @@
-import QtQuick
-import "private" as P
-
 ControlStyle {
     property Typography typography: Typography {}
     background {
