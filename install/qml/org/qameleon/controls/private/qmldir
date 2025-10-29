@@ -1,7 +1,0 @@
-module org.qameleon.controls.private
-linktarget qameleon_controls_privateplugin
-optional plugin qameleon_controls_privateplugin
-classname org_qameleon_controls_privatePlugin
-typeinfo qameleon_controls_private.qmltypes
-prefer :/org/qameleon/controls/private/
-

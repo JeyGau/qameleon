@@ -1,8 +1,8 @@
-import QtQuick.Controls as QQC2
+import QtQuick.Templates as T
 import org.qameleon.controls.styles
 import "private" as P
 
-QQC2.ApplicationWindow {
+T.ApplicationWindow {
     id: control
 
     property PageStyle style: PageStyle {}

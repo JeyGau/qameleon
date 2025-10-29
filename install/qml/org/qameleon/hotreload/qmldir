@@ -1,9 +1,4 @@
 module org.qameleon.hotreload
-linktarget qameleon_hotreload_qmlplugin
-optional plugin qameleon_hotreload_qmlplugin
-classname org_qameleon_hotreloadPlugin
-typeinfo qameleon_hotreload_qml.qmltypes
-prefer :/org/qameleon/hotreload/
 ApplicationStackView 1.0 ApplicationStackView.qml
 ApplicationWindow 1.0 ApplicationWindow.qml
 ViewFactory 1.0 ViewFactory.qml

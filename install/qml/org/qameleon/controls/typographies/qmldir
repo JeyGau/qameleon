@@ -1,9 +1,4 @@
 module org.qameleon.controls.typographies
-linktarget qameleon_controls_typographiesplugin
-optional plugin qameleon_controls_typographiesplugin
-classname org_qameleon_controls_typographiesPlugin
-typeinfo qameleon_controls_typographies.qmltypes
-prefer :/org/qameleon/controls/typographies/
 Body1 1.0 Body1.qml
 Body2 1.0 Body2.qml
 Caption 1.0 Caption.qml

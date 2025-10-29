@@ -1,8 +1,8 @@
-import QtQuick.Controls as QQC2
+import QtQuick.Templates as T
 import org.qameleon.controls.styles
 import "private" as P
 
-QQC2.Label {
+T.Label {
     id: control
 
     property LabelStyle style: LabelStyle {}
@@ -10,6 +10,8 @@ QQC2.Label {
 
     color: control.typography.color
     font: control.typography.font
+    horizontalAlignment: control.typography.horizontalAlignment
+    verticalAlignment: control.typography.verticalAlignment
 
     background: P.Background {
         style: control.style.background

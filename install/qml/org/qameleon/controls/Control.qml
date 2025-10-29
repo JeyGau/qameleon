@@ -1,8 +1,8 @@
-import QtQuick.Controls as QQC2
+import QtQuick.Controls as T
 import org.qameleon.controls.styles
 import "private" as P
 
-QQC2.Control {
+T.Control {
     id: control
 
     property ControlStyle style: ControlStyle {}

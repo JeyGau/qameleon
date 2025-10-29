@@ -1,9 +1,4 @@
 module org.qameleon.controls
-linktarget qameleon_controlsplugin
-optional plugin qameleon_controlsplugin
-classname org_qameleon_controlsPlugin
-typeinfo qameleon_controls.qmltypes
-prefer :/org/qameleon/controls/
 Action 1.0 Action.qml
 ActionsButtonBox 1.0 ActionsButtonBox.qml
 ApplicationWindow 1.0 ApplicationWindow.qml

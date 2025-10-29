@@ -1,28 +1,30 @@
 import QtQuick
-import QtQuick.Templates as QQC2
+import QtQuick.Templates as T
 import org.qameleon.controls.styles
 import "private" as P
 
-QQC2.Button {
+T.Button {
     id: control
 
     property ButtonStyle style: ButtonStyle {}
 
-    StyleEngine.control: control
-    StyleEngine.style: style
+    onStyleChanged: {
+        if (style)
+            style.__control = control;
+    }
 
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset, implicitContentHeight + topPadding + bottomPadding)
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset, implicitContentWidth + leftPadding + rightPadding)
 
     background: P.Background {
-        style: StyleEngine.activeStyle.background
+        style: control.style.background
     }
 
     contentItem: Text {
-        horizontalAlignment: Qt.AlignHCenter
-        verticalAlignment: Qt.AlignVCenter
+        horizontalAlignment: control.style.typography.horizontalAlignment
+        verticalAlignment: control.style.typography.verticalAlignment
         text: control.text
-        color: StyleEngine.activeStyle.typography.color
-        font: StyleEngine.activeStyle.typography.font
+        color: control.style.typography.color
+        font: control.style.typography.font
     }
 }

@@ -1,9 +1,4 @@
 module org.qameleon.controls.typographies.scales
-linktarget qameleon_controls_typographies_scalesplugin
-optional plugin qameleon_controls_typographies_scalesplugin
-classname org_qameleon_controls_typographies_scalesPlugin
-typeinfo qameleon_controls_typographies_scales.qmltypes
-prefer :/org/qameleon/controls/typographies/scales/
 Body1 1.0 Body1.qml
 Body2 1.0 Body2.qml
 Caption 1.0 Caption.qml

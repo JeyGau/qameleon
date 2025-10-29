@@ -6,4 +6,6 @@ QtObject {
     property font font: Qt.font({
         "family": ThemeManager.theme.fontFamily
     })
+    property int horizontalAlignment: Text.AlignHCenter
+    property int verticalAlignment: Text.AlignVCenter
 }
