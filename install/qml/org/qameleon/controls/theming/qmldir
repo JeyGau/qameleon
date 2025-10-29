@@ -1,0 +1,9 @@
+module org.qameleon.controls.theming
+linktarget qameleon_controls_themingplugin
+optional plugin qameleon_controls_themingplugin
+classname org_qameleon_controls_themingPlugin
+typeinfo qameleon_controls_theming.qmltypes
+prefer :/org/qameleon/controls/theming/
+AbstractTheme 1.0 AbstractTheme.qml
+singleton ThemeManager 1.0 ThemeManager.qml
+

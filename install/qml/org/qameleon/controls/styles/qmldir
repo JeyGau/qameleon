@@ -1,0 +1,17 @@
+module org.qameleon.controls.styles
+linktarget qameleon_controls_stylesplugin
+optional plugin qameleon_controls_stylesplugin
+classname org_qameleon_controls_stylesPlugin
+typeinfo qameleon_controls_styles.qmltypes
+prefer :/org/qameleon/controls/styles/
+ActionsButtonBoxStyle 1.0 ActionsButtonBoxStyle.qml
+ButtonStyle 1.0 ButtonStyle.qml
+ControlStyle 1.0 ControlStyle.qml
+LabelStyle 1.0 LabelStyle.qml
+PageStyle 1.0 PageStyle.qml
+Typography 1.0 Typography.qml
+Border 1.0 private/Border.qml
+internal Border private/Border.qml
+Padding 1.0 private/Padding.qml
+internal Padding private/Padding.qml
+
