@@ -7,6 +7,7 @@ QtObject {
     property string fontFamily: "Arial"
     property int borderWidth: 1
     property int borderRadius: 2
+    property real elevation: 0
     property color primaryColor: Material.color(Material.Blue)
     property color secondaryColor: Material.color(Material.LightBlue)
     property color textColor: Material.foreground

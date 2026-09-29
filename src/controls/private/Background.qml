@@ -13,12 +13,12 @@ Rectangle {
     implicitWidth: style.implicitWidth
     implicitHeight: style.implicitHeight
 
-    layer.enabled: style.dropShadow.enabled
+    layer.enabled: style.dropShadow.enabled || style.elevation > 0
 
     layer.effect: DropShadow {
-        horizontalOffset: style.dropShadow.xOffset
-        verticalOffset: style.dropShadow.yOffset
-        radius: style.dropShadow.radius
+        horizontalOffset: style.dropShadow.enabled ? style.dropShadow.xOffset : 0
+        verticalOffset: style.dropShadow.enabled ? style.dropShadow.yOffset : Math.max(1, style.elevation / 2)
+        radius: style.dropShadow.enabled ? style.dropShadow.radius : style.elevation
         color: style.dropShadow.color
     }
 }

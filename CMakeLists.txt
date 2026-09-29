@@ -70,7 +70,15 @@ if(BUILD_TESTING)
             -import ${CMAKE_BINARY_DIR}/qml
     )
 
-    set_tests_properties(qameleon_style_context qameleon_abstract_button qameleon_round_button PROPERTIES
+    add_test(
+        NAME qameleon_runtime_theme
+        COMMAND
+            ${QAMELEON_QMLTESTRUNNER_EXECUTABLE}
+            -input ${CMAKE_CURRENT_SOURCE_DIR}/tests/qml/tst_runtime_theme.qml
+            -import ${CMAKE_BINARY_DIR}/qml
+    )
+
+    set_tests_properties(qameleon_style_context qameleon_abstract_button qameleon_round_button qameleon_runtime_theme PROPERTIES
         ENVIRONMENT "QT_QPA_PLATFORM=offscreen"
     )
 endif()

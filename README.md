@@ -91,6 +91,58 @@ Page {
 }
 ```
 
+## Runtime themes and style properties
+
+Controls read default radius and elevation values from the active theme. The
+theme object can be replaced or edited at runtime and existing controls update
+immediately:
+
+```qml
+import org.qameleon.controls.theming 1.0
+
+AbstractTheme {
+    id: elevatedTheme
+    borderRadius: 12
+    elevation: 8
+}
+
+Button {
+    text: "Use elevated theme"
+    onClicked: ThemeManager.theme = elevatedTheme
+}
+```
+
+Values assigned directly to a control style take precedence and stop following
+the corresponding theme default:
+
+```qml
+Qameleon.Button {
+    style.background.radius: 2
+    style.background.elevation: 0
+}
+```
+
+The planned style-module attached-property API will support inherited overrides
+with syntax such as:
+
+```qml
+Item {
+    MyStyle.elevation: 8
+    MyStyle.radius: 12
+}
+```
+
+Descendant controls will inherit these values unless a nearer ancestor or the
+control's local style overrides them. The precedence contract is:
+
+1. Local control style property.
+2. Nearest inherited style-module attached property.
+3. Active theme property.
+4. Qameleon built-in default.
+
+Attached properties require a registered style-specific provider and are not yet
+implemented by the QML-only `MyStyle` example.
+
 ## License
 
 Qameleon is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
