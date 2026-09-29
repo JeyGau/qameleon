@@ -8,6 +8,7 @@ LabelStyle 1.0 LabelStyle.qml
 PageStyle 1.0 PageStyle.qml
 RadioButtonStyle 1.0 RadioButtonStyle.qml
 RoundButtonStyle 1.0 RoundButtonStyle.qml
+SwitchStyle 1.0 SwitchStyle.qml
 ToolButtonStyle 1.0 ToolButtonStyle.qml
 Typography 1.0 Typography.qml
 internal Border private/Border.qml

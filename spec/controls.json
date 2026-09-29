@@ -259,7 +259,9 @@
         {
             "name": "Switch",
             "category": "button",
-            "status": "planned"
+            "status": "prototype",
+            "qml": "Switch.qml",
+            "style": "SwitchStyle"
         },
         {
             "name": "SwitchDelegate",

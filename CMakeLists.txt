@@ -87,6 +87,14 @@ if(BUILD_TESTING)
     )
 
     add_test(
+        NAME qameleon_switch
+        COMMAND
+            ${QAMELEON_QMLTESTRUNNER_EXECUTABLE}
+            -input ${CMAKE_CURRENT_SOURCE_DIR}/tests/qml/tst_switch.qml
+            -import ${CMAKE_BINARY_DIR}/qml
+    )
+
+    add_test(
         NAME qameleon_runtime_theme
         COMMAND
             ${QAMELEON_QMLTESTRUNNER_EXECUTABLE}
@@ -94,7 +102,7 @@ if(BUILD_TESTING)
             -import ${CMAKE_BINARY_DIR}/qml
     )
 
-    set_tests_properties(qameleon_style_context qameleon_abstract_button qameleon_round_button qameleon_tool_button qameleon_radio_button qameleon_runtime_theme PROPERTIES
+    set_tests_properties(qameleon_style_context qameleon_abstract_button qameleon_round_button qameleon_tool_button qameleon_radio_button qameleon_switch qameleon_runtime_theme PROPERTIES
         ENVIRONMENT "QT_QPA_PLATFORM=offscreen"
     )
 endif()
