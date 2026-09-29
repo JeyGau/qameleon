@@ -27,6 +27,16 @@ add_subdirectory(src/hotreload)
 
 if(BUILD_TESTING)
     find_package(Python3 REQUIRED COMPONENTS Interpreter)
+    get_target_property(QT_QMAKE_EXECUTABLE Qt6::qmake IMPORTED_LOCATION)
+    get_filename_component(QT_BINARY_DIRECTORY "${QT_QMAKE_EXECUTABLE}" DIRECTORY)
+    find_program(QAMELEON_QMLTESTRUNNER_EXECUTABLE
+        NAMES qmltestrunner
+        HINTS "${QT_BINARY_DIRECTORY}"
+        NO_DEFAULT_PATH
+        NO_CACHE
+        REQUIRED
+    )
+
     add_test(
         NAME qameleon_controls_manifest
         COMMAND
@@ -34,6 +44,17 @@ if(BUILD_TESTING)
             ${CMAKE_CURRENT_SOURCE_DIR}/tools/validate_controls_manifest.py
             ${CMAKE_CURRENT_SOURCE_DIR}/spec/controls.json
             ${CMAKE_CURRENT_SOURCE_DIR}/src/controls
+    )
+
+    add_test(
+        NAME qameleon_style_context
+        COMMAND
+            ${QAMELEON_QMLTESTRUNNER_EXECUTABLE}
+            -input ${CMAKE_CURRENT_SOURCE_DIR}/tests/qml/tst_style_context.qml
+            -import ${CMAKE_BINARY_DIR}/qml
+    )
+    set_tests_properties(qameleon_style_context PROPERTIES
+        ENVIRONMENT "QT_QPA_PLATFORM=offscreen"
     )
 endif()
 

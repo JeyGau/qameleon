@@ -1,7 +1,9 @@
 import QtQml
-import QtQuick.Templates as T
 
 QtObject {
-    property T.Control __control: null
+    id: style
+
+    property QtObject control: null
+    property alias __control: style.control
     property Background background: Background {}
 }

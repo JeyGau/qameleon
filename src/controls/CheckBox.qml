@@ -14,7 +14,7 @@ T.CheckBox {
     Binding {
         when: control.style
         target: control.style
-        property: "__control"
+        property: "control"
         value: control
     }
 

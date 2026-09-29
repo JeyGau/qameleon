@@ -1,4 +1,5 @@
 import org.qameleon.controls.styles
+import QtQml
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Templates as T
@@ -27,6 +28,13 @@ T.Control {
     spacing: 16
     implicitWidth: implicitContentWidth + leftPadding + rightPadding
     implicitHeight: implicitContentHeight + topPadding + bottomPadding
+
+    Binding {
+        when: control.style
+        target: control.style
+        property: "control"
+        value: control
+    }
 
     T.ActionGroup {
         id: actionGroup
