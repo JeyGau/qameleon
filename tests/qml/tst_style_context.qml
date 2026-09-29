@@ -6,6 +6,10 @@ import org.qameleon.controls.styles 1.0 as Styles
 TestCase {
     name: "StyleContext"
 
+    Qameleon.AbstractButton {
+        id: abstractButton
+    }
+
     Qameleon.Control {
         id: control
     }
@@ -45,6 +49,7 @@ TestCase {
     }
 
     function test_contextBindings() {
+        verifyStyleContext(abstractButton);
         verifyStyleContext(control);
         verifyStyleContext(button);
         verifyStyleContext(checkBox);

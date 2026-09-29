@@ -1,4 +1,5 @@
 module org.qameleon.controls.styles
+AbstractButtonStyle 1.0 AbstractButtonStyle.qml
 ActionsButtonBoxStyle 1.0 ActionsButtonBoxStyle.qml
 ButtonStyle 1.0 ButtonStyle.qml
 CheckBoxStyle 1.0 CheckBoxStyle.qml
@@ -6,10 +7,7 @@ ControlStyle 1.0 ControlStyle.qml
 LabelStyle 1.0 LabelStyle.qml
 PageStyle 1.0 PageStyle.qml
 Typography 1.0 Typography.qml
-Border 1.0 private/Border.qml
 internal Border private/Border.qml
-Padding 1.0 private/Padding.qml
 internal Padding private/Padding.qml
-Background 1.0 private/Background.qml
 internal Background private/Background.qml
 

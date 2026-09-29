@@ -112,6 +112,31 @@ def validate_registrations(controls_directory: Path, tracked_exports):
     return errors
 
 
+def validate_style_registrations(controls_directory: Path, entries):
+    errors = []
+    tracked_styles = {
+        entry["style"]
+        for entry in entries
+        if entry.get("status") != "planned" and entry.get("style")
+    }
+
+    qmldir_path = controls_directory / "styles" / "qmldir"
+    try:
+        public_types, all_types = read_qmldir(qmldir_path)
+    except (OSError, ValueError) as error:
+        return [str(error)]
+
+    for name, lines in all_types.items():
+        if len(lines) > 1:
+            errors.append(
+                f"styles qmldir registers {name} more than once on lines {lines}")
+
+    for name in sorted(tracked_styles - public_types.keys()):
+        errors.append(f"{name}: style is not publicly registered in qmldir")
+
+    return errors
+
+
 def validate(manifest_path: Path, controls_directory: Path):
     manifest = load_json(manifest_path)
     errors = []
@@ -124,6 +149,7 @@ def validate(manifest_path: Path, controls_directory: Path):
         entries, controls_directory)
     errors.extend(entry_errors)
     errors.extend(validate_registrations(controls_directory, tracked_exports))
+    errors.extend(validate_style_registrations(controls_directory, entries))
     return errors
 
 

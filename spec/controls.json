@@ -21,7 +21,9 @@
         {
             "name": "AbstractButton",
             "category": "foundation",
-            "status": "planned"
+            "status": "prototype",
+            "qml": "AbstractButton.qml",
+            "style": "AbstractButtonStyle"
         },
         {
             "name": "Action",

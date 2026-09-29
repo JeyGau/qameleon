@@ -1,4 +1,5 @@
 module org.qameleon.controls
+AbstractButton 1.0 AbstractButton.qml
 Action 1.0 Action.qml
 ActionsButtonBox 1.0 ActionsButtonBox.qml
 ApplicationWindow 1.0 ApplicationWindow.qml

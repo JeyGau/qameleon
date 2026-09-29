@@ -53,7 +53,16 @@ if(BUILD_TESTING)
             -input ${CMAKE_CURRENT_SOURCE_DIR}/tests/qml/tst_style_context.qml
             -import ${CMAKE_BINARY_DIR}/qml
     )
-    set_tests_properties(qameleon_style_context PROPERTIES
+
+    add_test(
+        NAME qameleon_abstract_button
+        COMMAND
+            ${QAMELEON_QMLTESTRUNNER_EXECUTABLE}
+            -input ${CMAKE_CURRENT_SOURCE_DIR}/tests/qml/tst_abstract_button.qml
+            -import ${CMAKE_BINARY_DIR}/qml
+    )
+
+    set_tests_properties(qameleon_style_context qameleon_abstract_button PROPERTIES
         ENVIRONMENT "QT_QPA_PLATFORM=offscreen"
     )
 endif()
