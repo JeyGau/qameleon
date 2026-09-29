@@ -1,0 +1,318 @@
+{
+    "schemaVersion": 1,
+    "module": "org.qameleon.controls",
+    "apiVersion": "1.0",
+    "catalog": {
+        "name": "Qt Quick Controls 2",
+        "qtVersion": "5.15",
+        "notes": "Qt 5.15 defines the Qameleon 1.0 completeness baseline. Internal Qt implementation types are excluded."
+    },
+    "runtimes": [
+        {
+            "id": "qt5",
+            "minimumVersion": "5.15"
+        },
+        {
+            "id": "qt6",
+            "minimumVersion": "6.8"
+        }
+    ],
+    "controls": [
+        {
+            "name": "AbstractButton",
+            "category": "foundation",
+            "status": "planned"
+        },
+        {
+            "name": "Action",
+            "category": "nonvisual",
+            "status": "prototype",
+            "qml": "Action.qml"
+        },
+        {
+            "name": "ActionGroup",
+            "category": "nonvisual",
+            "status": "planned"
+        },
+        {
+            "name": "ApplicationWindow",
+            "category": "window",
+            "status": "prototype",
+            "qml": "ApplicationWindow.qml"
+        },
+        {
+            "name": "BusyIndicator",
+            "category": "indicator",
+            "status": "planned"
+        },
+        {
+            "name": "Button",
+            "category": "button",
+            "status": "prototype",
+            "qml": "Button.qml",
+            "style": "ButtonStyle"
+        },
+        {
+            "name": "ButtonGroup",
+            "category": "nonvisual",
+            "status": "planned"
+        },
+        {
+            "name": "CheckBox",
+            "category": "button",
+            "status": "prototype",
+            "qml": "CheckBox.qml",
+            "style": "CheckBoxStyle"
+        },
+        {
+            "name": "CheckDelegate",
+            "category": "delegate",
+            "status": "planned"
+        },
+        {
+            "name": "ComboBox",
+            "category": "input",
+            "status": "planned"
+        },
+        {
+            "name": "Container",
+            "category": "foundation",
+            "status": "planned"
+        },
+        {
+            "name": "Control",
+            "category": "foundation",
+            "status": "prototype",
+            "qml": "Control.qml",
+            "style": "ControlStyle"
+        },
+        {
+            "name": "DelayButton",
+            "category": "button",
+            "status": "planned"
+        },
+        {
+            "name": "Dial",
+            "category": "input",
+            "status": "planned"
+        },
+        {
+            "name": "Dialog",
+            "category": "overlay",
+            "status": "planned"
+        },
+        {
+            "name": "DialogButtonBox",
+            "category": "overlay",
+            "status": "planned"
+        },
+        {
+            "name": "Drawer",
+            "category": "overlay",
+            "status": "planned"
+        },
+        {
+            "name": "Frame",
+            "category": "container",
+            "status": "planned"
+        },
+        {
+            "name": "GroupBox",
+            "category": "container",
+            "status": "planned"
+        },
+        {
+            "name": "ItemDelegate",
+            "category": "delegate",
+            "status": "planned"
+        },
+        {
+            "name": "Label",
+            "category": "display",
+            "status": "prototype",
+            "qml": "Label.qml",
+            "style": "LabelStyle"
+        },
+        {
+            "name": "Menu",
+            "category": "menu",
+            "status": "planned"
+        },
+        {
+            "name": "MenuBar",
+            "category": "menu",
+            "status": "planned"
+        },
+        {
+            "name": "MenuBarItem",
+            "category": "menu",
+            "status": "planned"
+        },
+        {
+            "name": "MenuItem",
+            "category": "menu",
+            "status": "planned"
+        },
+        {
+            "name": "MenuSeparator",
+            "category": "menu",
+            "status": "planned"
+        },
+        {
+            "name": "Page",
+            "category": "container",
+            "status": "prototype",
+            "qml": "Page.qml",
+            "style": "PageStyle"
+        },
+        {
+            "name": "PageIndicator",
+            "category": "indicator",
+            "status": "planned"
+        },
+        {
+            "name": "Pane",
+            "category": "container",
+            "status": "planned"
+        },
+        {
+            "name": "Popup",
+            "category": "overlay",
+            "status": "planned"
+        },
+        {
+            "name": "ProgressBar",
+            "category": "indicator",
+            "status": "planned"
+        },
+        {
+            "name": "RadioButton",
+            "category": "button",
+            "status": "planned"
+        },
+        {
+            "name": "RadioDelegate",
+            "category": "delegate",
+            "status": "planned"
+        },
+        {
+            "name": "RangeSlider",
+            "category": "input",
+            "status": "planned"
+        },
+        {
+            "name": "RoundButton",
+            "category": "button",
+            "status": "planned"
+        },
+        {
+            "name": "ScrollBar",
+            "category": "navigation",
+            "status": "planned"
+        },
+        {
+            "name": "ScrollIndicator",
+            "category": "indicator",
+            "status": "planned"
+        },
+        {
+            "name": "ScrollView",
+            "category": "container",
+            "status": "planned"
+        },
+        {
+            "name": "Slider",
+            "category": "input",
+            "status": "planned"
+        },
+        {
+            "name": "SpinBox",
+            "category": "input",
+            "status": "planned"
+        },
+        {
+            "name": "SplitView",
+            "category": "navigation",
+            "status": "planned"
+        },
+        {
+            "name": "StackView",
+            "category": "navigation",
+            "status": "planned"
+        },
+        {
+            "name": "SwipeDelegate",
+            "category": "delegate",
+            "status": "planned"
+        },
+        {
+            "name": "SwipeView",
+            "category": "navigation",
+            "status": "planned"
+        },
+        {
+            "name": "Switch",
+            "category": "button",
+            "status": "planned"
+        },
+        {
+            "name": "SwitchDelegate",
+            "category": "delegate",
+            "status": "planned"
+        },
+        {
+            "name": "TabBar",
+            "category": "navigation",
+            "status": "planned"
+        },
+        {
+            "name": "TabButton",
+            "category": "button",
+            "status": "planned"
+        },
+        {
+            "name": "TextArea",
+            "category": "input",
+            "status": "planned"
+        },
+        {
+            "name": "TextField",
+            "category": "input",
+            "status": "planned"
+        },
+        {
+            "name": "ToolBar",
+            "category": "container",
+            "status": "planned"
+        },
+        {
+            "name": "ToolButton",
+            "category": "button",
+            "status": "planned"
+        },
+        {
+            "name": "ToolSeparator",
+            "category": "display",
+            "status": "planned"
+        },
+        {
+            "name": "ToolTip",
+            "category": "overlay",
+            "status": "planned"
+        },
+        {
+            "name": "Tumbler",
+            "category": "input",
+            "status": "planned"
+        }
+    ],
+    "extensions": [
+        {
+            "name": "ActionsButtonBox",
+            "category": "composite",
+            "status": "prototype",
+            "qml": "ActionsButtonBox.qml",
+            "style": "ActionsButtonBoxStyle"
+        }
+    ]
+}
