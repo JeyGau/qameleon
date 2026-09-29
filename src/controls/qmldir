@@ -9,5 +9,6 @@ Control 1.0 Control.qml
 Label 1.0 Label.qml
 Page 1.0 Page.qml
 RoundButton 1.0 RoundButton.qml
+ToolButton 1.0 ToolButton.qml
 internal Background private/Background.qml
 import QtQuick.Controls.Basic auto

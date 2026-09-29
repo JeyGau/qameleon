@@ -7,6 +7,7 @@ ControlStyle 1.0 ControlStyle.qml
 LabelStyle 1.0 LabelStyle.qml
 PageStyle 1.0 PageStyle.qml
 RoundButtonStyle 1.0 RoundButtonStyle.qml
+ToolButtonStyle 1.0 ToolButtonStyle.qml
 Typography 1.0 Typography.qml
 internal Border private/Border.qml
 internal Padding private/Padding.qml

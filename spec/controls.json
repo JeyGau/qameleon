@@ -292,7 +292,9 @@
         {
             "name": "ToolButton",
             "category": "button",
-            "status": "planned"
+            "status": "prototype",
+            "qml": "ToolButton.qml",
+            "style": "ToolButtonStyle"
         },
         {
             "name": "ToolSeparator",
