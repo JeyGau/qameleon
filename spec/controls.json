@@ -190,7 +190,9 @@
         {
             "name": "RadioButton",
             "category": "button",
-            "status": "planned"
+            "status": "prototype",
+            "qml": "RadioButton.qml",
+            "style": "RadioButtonStyle"
         },
         {
             "name": "RadioDelegate",

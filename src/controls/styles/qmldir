@@ -6,6 +6,7 @@ CheckBoxStyle 1.0 CheckBoxStyle.qml
 ControlStyle 1.0 ControlStyle.qml
 LabelStyle 1.0 LabelStyle.qml
 PageStyle 1.0 PageStyle.qml
+RadioButtonStyle 1.0 RadioButtonStyle.qml
 RoundButtonStyle 1.0 RoundButtonStyle.qml
 ToolButtonStyle 1.0 ToolButtonStyle.qml
 Typography 1.0 Typography.qml

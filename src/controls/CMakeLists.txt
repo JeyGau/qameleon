@@ -1,5 +1,5 @@
 list(APPEND CONTROLS_MODULE_QML_PRIVATE_FILES private/Background.qml)
-list(APPEND CONTROLS_MODULE_QML_FILES AbstractButton.qml Action.qml ActionsButtonBox.qml ApplicationWindow.qml Button.qml CheckBox.qml Control.qml Label.qml Page.qml RoundButton.qml ToolButton.qml ${CONTROLS_MODULE_QML_PRIVATE_FILES})
+list(APPEND CONTROLS_MODULE_QML_FILES AbstractButton.qml Action.qml ActionsButtonBox.qml ApplicationWindow.qml Button.qml CheckBox.qml Control.qml Label.qml Page.qml RadioButton.qml RoundButton.qml ToolButton.qml ${CONTROLS_MODULE_QML_PRIVATE_FILES})
 
 set_source_files_properties(${CONTROLS_MODULE_QML_PRIVATE_FILES} PROPERTIES
     QT_QML_INTERNAL_TYPE  TRUE
