@@ -30,6 +30,10 @@ TestCase {
         id: page
     }
 
+    Qameleon.RoundButton {
+        id: roundButton
+    }
+
     Qameleon.ActionsButtonBox {
         id: actionsButtonBox
         style: Styles.ActionsButtonBoxStyle {}
@@ -55,6 +59,7 @@ TestCase {
         verifyStyleContext(checkBox);
         verifyStyleContext(label);
         verifyStyleContext(page);
+        verifyStyleContext(roundButton);
         verifyStyleContext(actionsButtonBox);
 
         const applicationWindow = applicationWindowComponent.createObject(null);

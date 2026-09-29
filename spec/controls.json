@@ -205,7 +205,9 @@
         {
             "name": "RoundButton",
             "category": "button",
-            "status": "planned"
+            "status": "prototype",
+            "qml": "RoundButton.qml",
+            "style": "RoundButtonStyle"
         },
         {
             "name": "ScrollBar",
