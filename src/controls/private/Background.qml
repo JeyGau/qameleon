@@ -3,6 +3,8 @@ import Qt5Compat.GraphicalEffects
 import "../styles/private" as S
 
 Rectangle {
+    id: background
+
     property S.Background style: S.Background {}
 
     color: style.color
@@ -13,12 +15,13 @@ Rectangle {
     implicitWidth: style.implicitWidth
     implicitHeight: style.implicitHeight
 
-    layer.enabled: style.dropShadow.enabled || style.elevation > 0
-
+    layer.enabled: style.dropShadow.enabled
     layer.effect: DropShadow {
-        horizontalOffset: style.dropShadow.enabled ? style.dropShadow.xOffset : 0
-        verticalOffset: style.dropShadow.enabled ? style.dropShadow.yOffset : Math.max(1, style.elevation / 2)
-        radius: style.dropShadow.enabled ? style.dropShadow.radius : style.elevation
-        color: style.dropShadow.color
+        cached: true
+        color: background.style.dropShadow.color
+        horizontalOffset: background.style.dropShadow.xOffset
+        radius: background.style.dropShadow.radius
+        transparentBorder: true
+        verticalOffset: background.style.dropShadow.yOffset
     }
 }

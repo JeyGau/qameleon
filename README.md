@@ -118,7 +118,7 @@ the corresponding theme default:
 ```qml
 Qameleon.Button {
     style.background.radius: 2
-    style.background.elevation: 0
+    style.background.dropShadow.elevation: 0
 }
 ```
 

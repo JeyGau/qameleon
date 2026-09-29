@@ -12,6 +12,12 @@ Theme values are reactive. Reassigning `ThemeManager.theme`, or changing a
 property on the active theme, updates controls whose values have not been
 overridden locally.
 
+Elevation is owned and rendered by the background's `dropShadow` style. The
+active theme supplies `dropShadow.elevation`; that value controls whether the
+shadow is enabled and derives its default blur radius and vertical offset.
+Direct `dropShadow` assignments can override the elevation or any derived
+property independently. The renderer uses transparent borders and caching.
+
 The initial theme-backed properties are `borderRadius` and `elevation`:
 
 ```qml
@@ -26,7 +32,7 @@ A direct style assignment remains local:
 ```qml
 Qameleon.Button {
     style.background.radius: 2
-    style.background.elevation: 0
+    style.background.dropShadow.elevation: 0
 }
 ```
 
