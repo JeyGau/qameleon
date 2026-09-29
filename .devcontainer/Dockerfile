@@ -1,20 +1,21 @@
-FROM mcr.microsoft.com/devcontainers/cpp:1-ubuntu-22.04
+FROM ubuntu:plucky
 
 ARG REINSTALL_CMAKE_VERSION_FROM_SOURCE="3.22.2"
 
-# Optionally install the cmake for vcpkg
-COPY ./reinstall-cmake.sh /tmp/
+# # Optionally install the cmake for vcpkg
+# COPY ./reinstall-cmake.sh /tmp/
 
-RUN if [ "${REINSTALL_CMAKE_VERSION_FROM_SOURCE}" != "none" ]; then \
-    chmod +x /tmp/reinstall-cmake.sh && /tmp/reinstall-cmake.sh ${REINSTALL_CMAKE_VERSION_FROM_SOURCE}; \
-    fi \
-    && rm -f /tmp/reinstall-cmake.sh
+# RUN if [ "${REINSTALL_CMAKE_VERSION_FROM_SOURCE}" != "none" ]; then \
+#     chmod +x /tmp/reinstall-cmake.sh && /tmp/reinstall-cmake.sh ${REINSTALL_CMAKE_VERSION_FROM_SOURCE}; \
+#     fi \
+#     && rm -f /tmp/reinstall-cmake.sh
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     automake \
     build-essential \
     clang \
+    cmake \
     debianutils \
     g++ \
     libgl1-mesa-dev \
@@ -25,13 +26,14 @@ RUN apt-get update \
     python3-pip \
     python3-tk \
     python3-venv \
+    qml6-module-qtqml-workerscript \
     qml6-module-qtquick \
     qml6-module-qtquick-controls \
     qml6-module-qtquick-dialogs \
     qml6-module-qtquick-layouts \
     qml6-module-qtquick-templates \
     qml6-module-qtquick-window \
-    qml6-module-qtqml-workerscript \
+    qml6-module-qt5compat-graphicaleffects \
     qt6-base-dev \
     qt6-declarative-dev \
     qt6-tools-dev \

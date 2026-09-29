@@ -1,4 +1,5 @@
 import QtQuick
+import QtGraphicalEffects
 import "../styles/private" as S
 
 Rectangle {
@@ -11,4 +12,14 @@ Rectangle {
     opacity: style.opacity
     implicitWidth: style.implicitWidth
     implicitHeight: style.implicitHeight
+
+    layer.enabled: style.dropShadow.enabled
+
+    layer.effect: DropShadow {
+        horizontalOffset: style.dropShadow.xOffset
+        verticalOffset: style.dropShadow.yOffset
+        radius: style.dropShadow.radius
+        samples: style.dropShadow.samples
+        color: style.dropShadow.color
+    }
 }

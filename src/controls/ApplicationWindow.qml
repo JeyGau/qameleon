@@ -1,13 +1,13 @@
 import QtQuick.Templates as T
 import org.qameleon.controls.styles
-import org.qameleon.controls
+import "private" as P
 
 T.ApplicationWindow {
     id: control
 
     property PageStyle style: PageStyle {}
 
-    background: Background {
+    background: P.Background {
         style: control.style.background
     }
 }

@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(QT_QML_GENERATE_QMLLS_INI ON)
 
 # Find Qt6 components
-find_package(Qt6 REQUIRED COMPONENTS Core Quick Qml)
+find_package(Qt6 REQUIRED COMPONENTS Core Quick Qml QuickControls2)
 
 # Enable automatic MOC, UIC, and RCC processing (Qt 6.2.4 compatible)
 set(CMAKE_AUTOMOC ON)

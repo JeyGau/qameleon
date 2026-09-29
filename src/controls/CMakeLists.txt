@@ -1,5 +1,5 @@
 list(APPEND CONTROLS_MODULE_QML_PRIVATE_FILES private/Background.qml)
-list(APPEND CONTROLS_MODULE_QML_FILES Action.qml ActionsButtonBox.qml ApplicationWindow.qml Button.qml Control.qml Label.qml Page.qml ${CONTROLS_MODULE_QML_PRIVATE_FILES})
+list(APPEND CONTROLS_MODULE_QML_FILES Action.qml ActionsButtonBox.qml ApplicationWindow.qml Button.qml CheckBox.qml Control.qml Label.qml Page.qml ${CONTROLS_MODULE_QML_PRIVATE_FILES})
 
 set_source_files_properties(${CONTROLS_MODULE_QML_PRIVATE_FILES} PROPERTIES
     QT_QML_INTERNAL_TYPE  TRUE
@@ -33,6 +33,7 @@ target_link_libraries(qameleon_controls PUBLIC
     Qt6::Core
     Qt6::Quick
     Qt6::Qml
+    Qt6::QuickControls2
 )
 
 

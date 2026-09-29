@@ -1,7 +1,7 @@
-import QtQuick
+import QtQml
 import QtQuick.Templates as T
 import org.qameleon.controls.styles
-import org.qameleon.controls
+import "private" as P
 
 T.Button {
     id: control
@@ -18,12 +18,12 @@ T.Button {
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset, implicitContentHeight + topPadding + bottomPadding)
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset, implicitContentWidth + leftPadding + rightPadding)
 
-    background: Background {
+    background: P.Background {
         style: control.style.background
     }
 
     contentItem: Label {
-        style: control.style.labelStyle
+        style: control.style.label
         text: control.text
     }
 }
