@@ -6,6 +6,7 @@ ApplicationWindow 1.0 ApplicationWindow.qml
 Button 1.0 Button.qml
 CheckBox 1.0 CheckBox.qml
 Control 1.0 Control.qml
+DelayButton 1.0 DelayButton.qml
 Label 1.0 Label.qml
 Page 1.0 Page.qml
 RadioButton 1.0 RadioButton.qml

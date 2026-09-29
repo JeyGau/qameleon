@@ -4,6 +4,7 @@ ActionsButtonBoxStyle 1.0 ActionsButtonBoxStyle.qml
 ButtonStyle 1.0 ButtonStyle.qml
 CheckBoxStyle 1.0 CheckBoxStyle.qml
 ControlStyle 1.0 ControlStyle.qml
+DelayButtonStyle 1.0 DelayButtonStyle.qml
 LabelStyle 1.0 LabelStyle.qml
 PageStyle 1.0 PageStyle.qml
 RadioButtonStyle 1.0 RadioButtonStyle.qml

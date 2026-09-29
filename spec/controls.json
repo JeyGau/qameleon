@@ -91,7 +91,9 @@
         {
             "name": "DelayButton",
             "category": "button",
-            "status": "planned"
+            "status": "prototype",
+            "qml": "DelayButton.qml",
+            "style": "DelayButtonStyle"
         },
         {
             "name": "Dial",
