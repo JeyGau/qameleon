@@ -1,17 +1,20 @@
 AbstractButtonStyle {
-    property LabelStyle indicator: LabelStyle {
-        background {
-            color: "transparent"
-            implicitWidth: 24
-            implicitHeight: 24
-            radius: 12
+    property Background indicator: Background {
+        color: "transparent"
+        implicitWidth: 24
+        implicitHeight: 24
+        radius: 12
 
-            border {
-                color: "#667a75"
-                width: 1
-            }
+        border {
+            color: "#667a75"
+            width: control && control.activeFocus ? 2 : 1
         }
+    }
 
-        typography.color: "#087f6d"
+    property Background tick: Background {
+        color: control && control.checked ? "#087f6d" : "transparent"
+        implicitWidth: 12
+        implicitHeight: 12
+        radius: 6
     }
 }

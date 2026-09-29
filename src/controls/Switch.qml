@@ -22,20 +22,25 @@ T.Switch {
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset, indicator.implicitHeight + topPadding + bottomPadding, implicitContentHeight + topPadding + bottomPadding)
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset, indicator.implicitWidth + implicitContentWidth + spacing + leftPadding + rightPadding)
 
-    indicator: P.Background {
+    indicator: Label {
         id: indicatorItem
         objectName: "switchTrack"
 
         x: control.text ? (control.mirrored ? control.width - width - control.rightPadding : control.leftPadding) : control.leftPadding + (control.availableWidth - width) / 2
         y: control.topPadding + (control.availableHeight - height) / 2
 
-        style: control.style.indicator
+        style: LabelStyle {
+            background: control.style.indicator
+        }
+
+        width: control.style.indicator.implicitWidth
+        height: control.style.indicator.implicitHeight
 
         P.Background {
             id: thumb
             objectName: "switchThumb"
 
-            x: Math.max(0, Math.min(indicatorItem.width - width, control.visualPosition * indicatorItem.width - width / 2))
+            x: Math.max(indicatorItem.leftPadding, Math.min(indicatorItem.width - width - indicatorItem.rightPadding, indicatorItem.leftPadding + control.visualPosition * (indicatorItem.width - width / 2 - indicatorItem.leftPadding - indicatorItem.rightPadding)))
             y: (indicatorItem.height - height) / 2
             width: control.style.thumb.implicitWidth
             height: control.style.thumb.implicitHeight

@@ -37,11 +37,15 @@ Item {
         }
 
         function test_defaultStyleAndIndicator() {
+            const firstTick = findChild(firstOption, "radioTick");
+            const secondTick = findChild(secondOption, "radioTick");
             compare(firstOption.style.control, firstOption);
             compare(firstOption.indicator.width, 24);
             compare(firstOption.indicator.height, 24);
-            verify(firstOption.indicator.children[1].visible);
-            verify(!secondOption.indicator.children[1].visible);
+            verify(firstTick !== null);
+            verify(secondTick !== null);
+            verify(firstTick.visible);
+            verify(!secondTick.visible);
             compare(firstOption.contentItem.text, firstOption.text);
         }
 

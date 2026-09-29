@@ -29,7 +29,7 @@ Item {
             compare(switchControl.indicator.width, 48);
             compare(switchControl.indicator.height, 28);
             compare(switchControl.contentItem.text, switchControl.text);
-            compare(switchControl.indicator.style, switchControl.style.indicator);
+            compare(switchControl.indicator.style.background, switchControl.style.indicator);
             compare(switchControl.style.thumb.implicitWidth, 22);
         }
 
@@ -50,7 +50,7 @@ Item {
         function test_mirroredVisualPosition() {
             switchControl.checked = true;
             const thumb = findChild(switchControl, "switchThumb");
-            const expectedX = Math.max(0, Math.min(switchControl.indicator.width - thumb.width, switchControl.visualPosition * switchControl.indicator.width - thumb.width / 2));
+            const expectedX = Math.max(switchControl.indicator.leftPadding, Math.min(switchControl.indicator.width - thumb.width - switchControl.indicator.rightPadding, switchControl.indicator.leftPadding + switchControl.visualPosition * (switchControl.indicator.width - thumb.width / 2 - switchControl.indicator.leftPadding - switchControl.indicator.rightPadding)));
             tryCompare(thumb, "x", expectedX);
         }
 
@@ -59,7 +59,7 @@ Item {
             const thumb = findChild(switchControl, "switchThumb");
             verify(thumb !== null);
             compare(indicator.objectName, "switchTrack");
-            compare(indicator.color, switchControl.style.indicator.color);
+            compare(indicator.background.color, switchControl.style.indicator.color);
             compare(thumb.style, switchControl.style.thumb);
             compare(thumb.color, switchControl.style.thumb.color);
         }
