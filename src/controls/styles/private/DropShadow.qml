@@ -6,5 +6,4 @@ QtObject {
     property real xOffset: 3
     property real yOffset: 3
     property real radius: 8
-    property real samples: 0
 }

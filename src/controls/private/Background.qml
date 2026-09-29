@@ -1,5 +1,5 @@
 import QtQuick
-import QtGraphicalEffects
+import Qt5Compat.GraphicalEffects
 import "../styles/private" as S
 
 Rectangle {
@@ -19,7 +19,6 @@ Rectangle {
         horizontalOffset: style.dropShadow.xOffset
         verticalOffset: style.dropShadow.yOffset
         radius: style.dropShadow.radius
-        samples: style.dropShadow.samples
         color: style.dropShadow.color
     }
 }
